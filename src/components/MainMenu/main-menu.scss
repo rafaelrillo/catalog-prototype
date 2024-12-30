@@ -1,0 +1,28 @@
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.category-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.category-item {
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.category-item a {
+  text-decoration: none;
+  color: #AAC2B3;
+  transition: color 0.3s;
+}
+
+.category-item a:hover {
+  color: #000;
+}

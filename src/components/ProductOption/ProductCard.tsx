@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProductCardProps {
   name: string;
@@ -14,10 +15,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price }) =
         <h3>{name}</h3>
         <p>{description}</p>
       </div>
-      <div>
+      <div className='product-info'>
         <p className="product-price">${price.toFixed(2)}</p>
-        {/* solucionar icon */}
-        <img src="../../../public/icons/image-icon.svg" alt='image-icon'></img>
+        <Image
+          src="/icons/image-icon.svg"
+          alt="Descripción del ícono"
+          width={40}
+          height={40}
+        />
       </div>
     </div>
   );

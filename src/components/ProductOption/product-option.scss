@@ -26,3 +26,9 @@
   font-weight: bold;
   color: #0070f3;
 }
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
