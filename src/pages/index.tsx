@@ -1,8 +1,18 @@
+import { useEffect } from 'react';
 import MainMenu from '@/components/MainMenu/MainMenu';
 import CategorySection from '@/components/CategorySection/CategorySection';
 import Footer from '@/components/Footer/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton/ScrollToTopButton';
 
 const Home: React.FC = () => {
+
+  useEffect(() => {
+    const mainMenu = document.getElementById('main-menu');
+    if (mainMenu) {
+      mainMenu.scrollIntoView({ behavior: 'auto' }); // Posiciona instantáneamente
+    }
+  }, []); // Solo se ejecuta una vez, al montar el componente
+
   const categories = [
     { name: 'Categoría 1', id: 'category-1' },
     { name: 'Categoría 2', id: 'category-2' },
@@ -49,6 +59,7 @@ const Home: React.FC = () => {
           products={sampleProducts}
         />
       ))}
+      <ScrollToTopButton />
       <Footer />
     </div>
   );
