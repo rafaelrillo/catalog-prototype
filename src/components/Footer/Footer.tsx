@@ -16,8 +16,10 @@ const Footer: React.FC = () => {
           <GoogleMap />
         </div>
         <div className='info'>
-          <p>Direccion 1234</p>
-          <p>Tel: 381999999</p>
+          <h2>Direccion:</h2>
+          <p>Gral. Lamadrid 1200</p>
+          <h2>Telefono:</h2>
+          <p>381-999999</p>
         </div>
       </div>
       <div className='contact-container'>
@@ -28,8 +30,8 @@ const Footer: React.FC = () => {
           <Image
             src="/icons/phone.svg"
             alt="Descripción del ícono"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </a>
         <a
@@ -41,8 +43,8 @@ const Footer: React.FC = () => {
           <Image
             src="/icons/whatsapp.svg"
             alt="Descripción del ícono"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </a>
         <a
@@ -54,12 +56,19 @@ const Footer: React.FC = () => {
           <Image
             src="/icons/instagram.svg"
             alt="Descripción del ícono"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           /></a>
       </div>
+      <div className='horarios'>
+        <h2>Horario de atencion</h2>
+        <p>Lunes a Viernes</p>
+        <p>10:30 - 21:00</p>
+        <p>Sabados y Domingos</p>
+        <p>10:00 - 14:00</p>
+      </div>
       <div>
-        <Link href="https://google.com" className='studio-link'>made by Gocu studio</Link>
+        <Link href="https://google.com" className='studio-link'>made by Gloton Studio</Link>
       </div>
     </footer>
   );

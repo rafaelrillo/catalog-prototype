@@ -17,8 +17,8 @@ const Home: React.FC = () => {
     { name: 'Categoría 1', id: 'category-1' },
     { name: 'Categoría 2', id: 'category-2' },
     { name: 'Categoría 3', id: 'category-3' },
-    { name: 'Categoría 4', id: 'category-3' },
-    { name: 'Categoría 5', id: 'category-3' },
+    { name: 'Categoría 4', id: 'category-4' },
+    { name: 'Categoría 5', id: 'category-5' },
   ];
 
   const sampleProducts = [
@@ -30,19 +30,31 @@ const Home: React.FC = () => {
     },
     {
       name: 'Producto 2',
-      description: 'Descripción breve del producto.',
+      description: 'de cada diez personas que ven la television cinco, son la mitad',
       price: 29.99,
       image: '/path/to/image2.jpg',
     },
     {
       name: 'Producto 3',
-      description: 'Descripción breve del producto.',
+      description: 'medialuna de manteca',
       price: 29.99,
       image: '/path/to/image2.jpg',
     },
     {
       name: 'Producto 4',
-      description: 'Descripción breve del producto.',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
+      price: 29.99,
+      image: '/path/to/image2.jpg',
+    },
+    {
+      name: 'Producto 5',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
+      price: 29.99,
+      image: '/path/to/image2.jpg',
+    },
+    {
+      name: 'Producto 6',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
       price: 29.99,
       image: '/path/to/image2.jpg',
     },

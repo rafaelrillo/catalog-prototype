@@ -33,7 +33,7 @@ const ScrollToTopButton: React.FC = () => {
       aria-label="Volver al menú principal"
     >
       <Image
-        src="/icons/menu-icon.svg"
+        src="/icons/up-arrow-icon.svg"
         alt="Flecha hacia arriba"
         width={24}
         height={24}

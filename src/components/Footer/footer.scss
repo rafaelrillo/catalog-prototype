@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 20px;
 
-  background-color: gray;
+  background-color: #7d8c83;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -27,6 +27,10 @@
 
 .info {
   font-size: 1rem;
+  text-align: start;
+  h2 {
+    font-size: 16px;
+  }
 }
 
 .contact-container {
@@ -36,12 +40,36 @@
 }
 
 .contact-btn {
-  background: none;
+
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #AAC2B3; /* Azul para destacar */
+  color: #fff;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.horarios {
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    margin: 5px;
+  }
 }
 
 .studio-link {
   text-decoration: none;
-  color: inherit;
+  color:#7d8c83;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

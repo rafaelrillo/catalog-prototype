@@ -17,7 +17,7 @@ interface CategorySectionProps {
 const CategorySection: React.FC<CategorySectionProps> = ({id, name, products}) => {
   return (
     <section id={id} className="category-section section">
-      <h2>{name}</h2>
+      <h2 className="category-title">{name}</h2>
       <div className="product-list">
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
