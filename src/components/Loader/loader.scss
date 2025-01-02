@@ -1,0 +1,18 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Fondo blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1; /* Comienza completamente visible */
+  transition: opacity 0.5s ease; /* Duración de la transición */
+}
+
+.loader.fade-out {
+  opacity: 0; /* Se desvanece */
+}
