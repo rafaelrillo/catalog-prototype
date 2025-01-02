@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import ScrollIcon from "../ScrollIcon/ScrollIcon";
 
@@ -10,17 +10,34 @@ interface MainMenuProps {
 }
 
 const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const menuRef = useRef<HTMLElement>(null);
 
-  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting); 
+      },
+      { threshold: 0.5 }
+    );
+
+    if (menuRef.current) {
+      observer.observe(menuRef.current);
     }
-  };
+
+    return () => {
+      if (menuRef.current) {
+        observer.unobserve(menuRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section id="main-menu" className="section">
+    <section
+      id="main-menu"
+      ref={menuRef}
+      className={`section ${isVisible ? "visible" : "hidden"}`}
+    >
       <Image
         src="/images/logo.png"
         alt="Logo de mi sitio"
@@ -32,14 +49,22 @@ const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
           <li key={category.id} className="category-item">
             <a
               href={`#${category.id}`}
-              onClick={(e) => handleScroll(e, category.id)}
-            >{category.name}</a>
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById(category.id);
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              {category.name}
+            </a>
           </li>
         ))}
       </ul>
       <ScrollIcon />
     </section>
-  )
-}
+  );
+};
 
 export default MainMenu;
