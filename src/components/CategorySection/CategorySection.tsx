@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 
 interface Product {
@@ -11,12 +11,42 @@ interface Product {
 interface CategorySectionProps {
   id: string;
   name: string;
-  products: Product[]
+  products: Product[];
 }
 
-const CategorySection: React.FC<CategorySectionProps> = ({id, name, products}) => {
+const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id={id} className="category-section section">
+    <section
+      id={id}
+      ref={sectionRef}
+      className={`category-section section ${isVisible ? "visible" : "hidden"}`}
+    >
       <h2 className="category-title">{name}</h2>
       <div className="product-list">
         {products.map((product, index) => (
@@ -24,7 +54,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({id, name, products}) =
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default CategorySection
+export default CategorySection;
