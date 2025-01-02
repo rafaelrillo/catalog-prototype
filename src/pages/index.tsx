@@ -58,6 +58,24 @@ const Home: React.FC = () => {
       price: 29.99,
       image: '/images/product.jpg',
     },
+    {
+      name: 'Producto 6',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
+      price: 29.99,
+      image: '/images/product.jpg',
+    },
+    {
+      name: 'Producto 6',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
+      price: 29.99,
+      image: '/images/product.jpg',
+    },
+    {
+      name: 'Producto 6',
+      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
+      price: 29.99,
+      image: '/images/product.jpg',
+    },
   ];
 
   return (

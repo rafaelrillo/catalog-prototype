@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: $background-primary;
   opacity: 0; 
   transform: translateY(-20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -32,10 +32,10 @@
 
 .category-item a {
   text-decoration: none;
-  color: #AAC2B3;
+  color: $primary-color;
   transition: color 0.3s;
 }
 
 .category-item a:hover {
-  color: #000;
+  color: $black-color;
 }

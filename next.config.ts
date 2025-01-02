@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import path from 'path';
+
 
 const nextConfig: NextConfig = {
   webpack(config) {
@@ -7,6 +9,10 @@ const nextConfig: NextConfig = {
       use: ['@svgr/webpack'],
     });
     return config;
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src/styles/base')],
+    prependData: `@import "variables.scss";`, // Archivo de variables Sass
   },
 };
 
