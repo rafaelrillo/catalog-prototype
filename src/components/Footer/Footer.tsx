@@ -2,6 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import GoogleMap from '../GoogleMap/GoogleMap';
+import PhoneIcon from '../../../public/icons/phone.svg';
+import WhatsappIcon from '../../../public/icons/whatsapp.svg';
+import InstagramIcon from '../../../public/icons/instagram.svg';
+
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -27,12 +31,7 @@ const Footer: React.FC = () => {
           href="tel:+1234567890"
           className="contact-btn"
         >
-          <Image
-            src="/icons/phone.svg"
-            alt="Descripción del ícono"
-            width={30}
-            height={30}
-          />
+        <PhoneIcon width={30} height={30}  />
         </a>
         <a
           href="https://wa.me/1234567890?text=Hola,%20quiero%20saber%20más%20sobre%20sus%20productos"
@@ -40,12 +39,7 @@ const Footer: React.FC = () => {
           rel="noopener noreferrer"
           className="contact-btn"
         >
-          <Image
-            src="/icons/whatsapp.svg"
-            alt="Descripción del ícono"
-            width={30}
-            height={30}
-          />
+          <WhatsappIcon width={30} height={30} />
         </a>
         <a
           href="https://www.instagram.com/popacakes/?hl=es"
@@ -53,12 +47,8 @@ const Footer: React.FC = () => {
           rel="noopener noreferrer"
           className="contact-btn"
         >
-          <Image
-            src="/icons/instagram.svg"
-            alt="Descripción del ícono"
-            width={30}
-            height={30}
-          /></a>
+          <InstagramIcon width={30} height={30} />
+        </a>
       </div>
       <div className='horarios'>
         <h2>Horario de atencion</h2>

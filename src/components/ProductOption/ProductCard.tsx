@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import ImageIcon from '../../../public/icons/image.svg';
 
 interface ProductCardProps {
   name: string;
@@ -17,13 +17,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price }) =
       </div>
       <div className='product-info'>
         <p className="product-price">${price.toFixed(2)}</p>
-        <Image
-          src="/icons/image-icon.svg"
-          alt="Descripción del ícono"
-          width={40}
-          height={40}
-          className='product-img-icon'
-        />
+        <div className='product-img-icon'>
+        <ImageIcon width={40} height={40} />
+        </div>
       </div>
     </div>
   );
