@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../ProductOption/ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 interface Product {
   name: string;

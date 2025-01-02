@@ -1,0 +1,63 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave */
+}
+
+.modal-content {
+  background: #AAC2B3;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #3f3e3e;
+  transition: transform 0.3s ease; /* Animación al abrir */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
+.modal-info {
+  padding: 16px;
+}
+
+.modal-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.modal-info p {
+  font-size: 1rem;
+  color: #3f3e3e;
+}
+
+
+
+.modal-overlay.fade-in {
+  opacity: 1;
+  visibility: visible; 
+}
+
+.modal-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.fade-in .modal-content {
+  transform: scale(1); /* Aparece con un efecto de zoom */
+}
+
+.modal-overlay.fade-out .modal-content {
+  transform: scale(0.9); /* Desaparece con un efecto de zoom */
+}

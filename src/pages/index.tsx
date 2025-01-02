@@ -26,37 +26,37 @@ const Home: React.FC = () => {
       name: 'Producto 1',
       description: 'Descripción breve del producto.',
       price: 19.99,
-      image: '/path/to/image1.jpg',
+      image: '/images/product.jpg',
     },
     {
       name: 'Producto 2',
       description: 'de cada diez personas que ven la television cinco, son la mitad',
       price: 29.99,
-      image: '/path/to/image2.jpg',
+      image: '/images/product.jpg',
     },
     {
       name: 'Producto 3',
       description: 'medialuna de manteca',
       price: 29.99,
-      image: '/path/to/image2.jpg',
+      image: '/images/product.jpg',
     },
     {
       name: 'Producto 4',
       description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
       price: 29.99,
-      image: '/path/to/image2.jpg',
+      image: '/images/product.jpg',
     },
     {
       name: 'Producto 5',
       description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
       price: 29.99,
-      image: '/path/to/image2.jpg',
+      image: '/images/product.jpg',
     },
     {
       name: 'Producto 6',
       description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
       price: 29.99,
-      image: '/path/to/image2.jpg',
+      image: '/images/product.jpg',
     },
   ];
 
