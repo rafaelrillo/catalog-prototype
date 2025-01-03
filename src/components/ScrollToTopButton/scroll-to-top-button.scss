@@ -5,8 +5,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #AAC2B3; /* Azul para destacar */
-  color: #fff;
+  background-color: $primary-color; /* Azul para destacar */
+  color: $white-color;
   border: none;
   display: flex;
   justify-content: center;
@@ -18,6 +18,6 @@
 }
 
 .scroll-to-top-btn:hover {
-  background-color: black;
+  background-color: $black-color;
   transform: scale(1.1);
 }

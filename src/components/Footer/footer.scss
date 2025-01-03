@@ -44,8 +44,8 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #AAC2B3; /* Azul para destacar */
-  color: white;
+  background-color: $primary-color; /* Azul para destacar */
+  color: $white-color;
   border: none;
   display: flex;
   justify-content: center;

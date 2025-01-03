@@ -3,7 +3,7 @@
   height: 48px;
   position: relative;
   box-sizing: border-box;
-  border: 2px solid #AAC2B3;
+  border: 2px solid $primary-color;
   border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
   
 }
@@ -15,7 +15,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background: #AAC2B3;
+  background: $primary-color;
   border-radius: 10px;
   animation: scrollDown 1.5s linear infinite;
 }

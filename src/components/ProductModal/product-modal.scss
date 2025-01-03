@@ -9,27 +9,37 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-content {
-  background: #AAC2B3;
+  background: $background-secondary;
   width: 90%;
   max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #3f3e3e;
-  transition: transform 0.3s ease; /* Animación al abrir */
+  color: $primary-color;
+  transition: transform 0.3s ease;
+}
+
+.modal-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; /* Fondo para destacar la imagen */
+  padding: 16px; /* Espaciado interno para separar la imagen */
 }
 
 .modal-image {
-  width: 100%;
-  height: auto;
+  max-width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 8px;
 }
 
 .modal-info {
   padding: 16px;
+  text-align: center;
 }
 
 .modal-info h2 {
@@ -39,25 +49,6 @@
 
 .modal-info p {
   font-size: 1rem;
-  color: #3f3e3e;
-}
-
-
-
-.modal-overlay.fade-in {
-  opacity: 1;
-  visibility: visible; 
-}
-
-.modal-overlay.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal-overlay.fade-in .modal-content {
-  transform: scale(1); /* Aparece con un efecto de zoom */
-}
-
-.modal-overlay.fade-out .modal-content {
-  transform: scale(0.9); /* Desaparece con un efecto de zoom */
+  font-weight: 400;
+  color: $primary-color;
 }

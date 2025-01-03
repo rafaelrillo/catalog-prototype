@@ -34,14 +34,16 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
       onClick={onClose}
     >
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <Image
-          src={product?.image || '/placeholder.png'}
-          alt={product?.name || 'Producto'}
-          layout="responsive"
-          width={600}
-          height={400}
-          className="modal-image"
-        />
+        <div className="modal-image-wrapper">
+          <Image
+            src={product?.image || '/placeholder.png'}
+            alt={product?.name || 'Producto'}
+            layout="responsive"
+            width={4} // Relación de aspecto (4:3)
+            height={3}
+            className="modal-image"
+          />
+        </div>
         <div className="modal-info">
           <h2>{product?.name}</h2>
           <p>{product?.description}</p>

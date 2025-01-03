@@ -1,7 +1,7 @@
 
 .product-card {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   width: 80vw;
   padding: 1rem;
@@ -13,12 +13,12 @@
 
 .product-details {
   text-align: start;
-  color: #AAC2B3;
+  color: $primary-color;
 }
 
 .product-price {
   font-weight: bold;
-  color: #AAC2B3;
+  color: $primary-color;
 }
 
 
@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .product-name {
@@ -37,12 +38,12 @@
 }
 
 .product-img-icon {
-  background-color: #AAC2B3;
+  background-color: $primary-color;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  color: white;
+  color: $white-color;
 }

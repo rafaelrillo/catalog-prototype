@@ -22,14 +22,13 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: $background-secondary;
   overflow-y: auto;
   padding: 16px;
 }
 
 .category-title {
-  color: #AAC2B3;
+  color: $primary-color;
   font-size: 36px;
   font-weight: 400;
   text-transform: capitalize;
