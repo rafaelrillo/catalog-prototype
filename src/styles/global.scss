@@ -19,5 +19,13 @@ body {
 .scroll-container {
   height: 100vh; 
   scroll-snap-type: y mandatory; 
-  overflow-y: scroll;
+  overflow-y: scroll; 
+}
+
+.no-scroll {
+  overflow: hidden !important; 
+  height: 100vh; 
+}
+.scroll-container.no-scroll {
+  overflow: hidden !important;
 }

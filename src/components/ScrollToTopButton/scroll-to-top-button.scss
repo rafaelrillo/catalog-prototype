@@ -5,7 +5,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: $primary-color; /* Azul para destacar */
+  background-color: $primary-color;
   color: $white-color;
   border: none;
   display: flex;
@@ -15,9 +15,10 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.5s ease, transform 0.5s ease;
+  z-index: 10; /* Asegura que esté debajo del modal */
 }
 
-.scroll-to-top-btn:hover {
-  background-color: $black-color;
-  transform: scale(1.1);
+.scroll-to-top-btn.hidden {
+  visibility: hidden; /* Oculta el botón */
+  pointer-events: none; /* Deshabilita la interacción */
 }
