@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ImageIcon from '../../../public/icons/image.svg';
-import ProductModal from '../ProductModal/ProductModal';
+import { ProductModal } from '@/components';
 
 interface ProductCardProps {
   name: string;

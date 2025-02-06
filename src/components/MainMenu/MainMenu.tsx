@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import ScrollIcon from "../ScrollIcon/ScrollIcon";
+import { ScrollIcon } from "@/components";
 
 interface MainMenuProps {
   categories: {

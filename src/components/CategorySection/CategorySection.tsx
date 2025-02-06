@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import ProductCard from "../ProductCard/ProductCard";
+import { ProductCard } from "@/components";
 
 interface Product {
   name: string;
