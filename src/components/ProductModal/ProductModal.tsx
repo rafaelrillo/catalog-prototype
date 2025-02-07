@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 interface ProductModalProps {
@@ -12,67 +12,18 @@ interface ProductModalProps {
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+  const modalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    const scrollToTopButton = document.querySelector('.scroll-to-top-btn');
-
     if (isOpen) {
-      setIsAnimating(true);
-      setTimeout(() => setShowContent(true), 50);
-      
-      // Añadir clase para deshabilitar scroll
-      document.body.classList.add('no-scroll');
-      const scrollContainer = document.querySelector('.scroll-container');
-      if (scrollContainer) {
-        scrollContainer.classList.add('no-scroll');
-      }
-
-      // Ocultar el botón de scroll
-      if (scrollToTopButton) {
-        scrollToTopButton.classList.add('hidden');
-      }
+      modalRef.current?.showModal();
     } else {
-      setShowContent(false);
-      const timer = setTimeout(() => setIsAnimating(false), 300);
-      
-      // Quitar clase para restaurar scroll
-      document.body.classList.remove('no-scroll');
-      const scrollContainer = document.querySelector('.scroll-container');
-      if (scrollContainer) {
-        scrollContainer.classList.remove('no-scroll');
-      }
-
-      // Mostrar el botón de scroll
-      if (scrollToTopButton) {
-        scrollToTopButton.classList.remove('hidden');
-      }
-
-      return () => clearTimeout(timer);
+      modalRef.current?.close();
     }
-
-    // Cleanup en caso de desmontar el componente
-    return () => {
-      document.body.classList.remove('no-scroll');
-      const scrollContainer = document.querySelector('.scroll-container');
-      if (scrollContainer) {
-        scrollContainer.classList.remove('no-scroll');
-      }
-
-      if (scrollToTopButton) {
-        scrollToTopButton.classList.remove('hidden');
-      }
-    };
   }, [isOpen]);
 
-  if (!isAnimating) return null;
-
   return (
-    <div
-      className={`modal-overlay ${showContent ? 'fade-in' : 'fade-out'}`}
-      onClick={onClose}
-    >
+    <dialog ref={modalRef} className="modal" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-image-wrapper">
           <Image
@@ -89,7 +40,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
           <p>{product?.description}</p>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 };
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import ProductModal from '../ProductModal/ProductModal';
 import ImageIcon from '../../../public/icons/image.svg';
-import { ProductModal } from '@/components';
 
 interface ProductCardProps {
   name: string;
@@ -14,7 +14,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, ima
 
   return (
     <>
-      <div
+
+    <div
         className="product-card"
         onClick={() => setIsModalOpen(true)} // Abrir el modal al hacer clic
       >
@@ -29,9 +30,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, ima
           </div>
         </div>
       </div>
+
       <ProductModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)} // Cerrar el modal
+        onClose={() => setIsModalOpen(false)}
         product={{ name, description, image }}
       />
     </>

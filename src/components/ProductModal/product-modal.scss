@@ -1,18 +1,4 @@
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal-content {
+.modal {
   background: $background-secondary;
   width: 90%;
   max-width: 600px;
