@@ -15,10 +15,10 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.5s ease, transform 0.5s ease;
-  z-index: 10; /* Asegura que esté debajo del modal */
+  z-index: 10;
 }
 
 .scroll-to-top-btn.hidden {
-  visibility: hidden; /* Oculta el botón */
-  pointer-events: none; /* Deshabilita la interacción */
+  visibility: hidden;
+  pointer-events: none;
 }
