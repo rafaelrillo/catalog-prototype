@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { ScrollIcon } from "@/components";
 
@@ -16,18 +16,20 @@ const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting); 
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.5 }
     );
 
-    if (menuRef.current) {
-      observer.observe(menuRef.current);
+    const currentMenuRef = menuRef.current;
+
+    if (currentMenuRef) {
+      observer.observe(currentMenuRef);
     }
 
     return () => {
-      if (menuRef.current) {
-        observer.unobserve(menuRef.current);
+      if (currentMenuRef) {
+        observer.unobserve(currentMenuRef);
       }
     };
   }, []);

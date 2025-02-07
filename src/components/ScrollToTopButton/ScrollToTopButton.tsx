@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import UpArrowIcon from '../../../public/icons/up-arrow.svg';
 
 const ScrollToTopButton: React.FC = () => {
