@@ -14,8 +14,8 @@ const Home: React.FC = () => {
   }, []); // Solo se ejecuta una vez, al montar el componente
 
   const categories = [
-    { name: 'Categoría 1', id: 'category-1' },
-    { name: 'Categoría 2', id: 'category-2' },
+    { name: 'TORTAS', id: 'category-1' },
+    { name: 'TARTAS', id: 'category-2' },
     { name: 'Categoría 3', id: 'category-3' },
     { name: 'Categoría 4', id: 'category-4' },
     { name: 'Categoría 5', id: 'category-5' },
@@ -23,10 +23,10 @@ const Home: React.FC = () => {
 
   const sampleProducts = [
     {
-      name: 'Producto 1',
-      description: 'Descripción breve del producto.',
-      price: 19.99,
-      image: '/images/product.jpg',
+      name: 'Matilda',
+      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
+      price: 9.999,
+      image: '/images/matilda.png',
     },
     {
       name: 'Producto 2',

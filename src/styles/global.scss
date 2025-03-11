@@ -8,12 +8,55 @@
 @import '../components/ProductModal/product-modal.scss';
 @import '../components/GoogleMap/GoogleMap.scss';
 
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/fonts/LexendDeca-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .scroll-container {

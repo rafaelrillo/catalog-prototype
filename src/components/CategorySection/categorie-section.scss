@@ -28,10 +28,12 @@
 }
 
 .category-title {
-  color: $primary-color;
-  font-size: 36px;
-  font-weight: 400;
+  color: $text-primary;
+  font-size: 32px;
+  font-weight: 600;
   text-transform: capitalize;
+  text-align: start;
+  width: 100%;
 }
 
 .product-list {
