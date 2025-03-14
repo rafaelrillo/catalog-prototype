@@ -14,68 +14,45 @@ const Home: React.FC = () => {
   }, []); // Solo se ejecuta una vez, al montar el componente
 
   const categories = [
-    { name: 'TORTAS', id: 'category-1' },
-    { name: 'TARTAS', id: 'category-2' },
-    { name: 'Categoría 3', id: 'category-3' },
-    { name: 'Categoría 4', id: 'category-4' },
-    { name: 'Categoría 5', id: 'category-5' },
+    { name: 'Tortas', id: 'category-1' },
+    { name: 'Tartas', id: 'category-2' },
+    { name: 'Brownies', id: 'category-3' },
+    { name: 'Bocaditos', id: 'category-4' },
+    { name: 'Servicios', id: 'category-5' },
   ];
 
   const sampleProducts = [
     {
       name: 'Matilda',
       description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
-      price: 9.999,
+      price: 9999,
       image: '/images/matilda.png',
     },
     {
-      name: 'Producto 2',
-      description: 'de cada diez personas que ven la television cinco, son la mitad',
-      price: 29.99,
-      image: '/images/product.jpg',
+      name: 'Matilda',
+      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
+      price: 9999,
+      image: '/images/matilda.png',
     },
     {
-      name: 'Producto 3',
-      description: 'medialuna de manteca',
-      price: 29.99,
-      image: '/images/product.jpg',
+      name: 'Matilda',
+      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
+      price: 9999,
+      image: '/images/matilda.png',
     },
     {
-      name: 'Producto 4',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
+      name: 'Matilda',
+      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
+      price: 9999,
+      image: '/images/matilda.png',
     },
     {
-      name: 'Producto 5',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
+      name: 'Matilda',
+      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
+      price: 9999,
+      image: '/images/matilda.png',
     },
-    {
-      name: 'Producto 6',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
-    },
-    {
-      name: 'Producto 6',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
-    },
-    {
-      name: 'Producto 6',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
-    },
-    {
-      name: 'Producto 6',
-      description: 'texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias',
-      price: 29.99,
-      image: '/images/product.jpg',
-    },
+    
   ];
 
   return (

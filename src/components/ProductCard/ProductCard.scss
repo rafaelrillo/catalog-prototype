@@ -1,51 +1,85 @@
 .product-card {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
-  width: 80vw;
-  padding: 1rem;
-  margin: 0;
-  padding: 0;
+  width: 330px;
+  height: 117px;
+  background-color: $primary-color;
 
-  border: 1px solid $primary-color;
-  border-radius: 10px;
-  padding: 15px;
+  padding-left: 33px;
+
+  border-radius: 62px;
 }
 
 
 .product-details {
   text-align: start;
-  color: $primary-color;
+  color: $text-secondary;
+  max-width: 373px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 5px;
 }
-
-.product-price {
-  font-weight: bold;
-  color: $primary-color;
-}
-
 
 .product-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  margin: 0;
 }
 
 .product-name {
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
 }
 
 .product-description {
-  font-size: 16px;
+  font-size: 12.322px;
+  margin: 0;
+  font-weight: 300;
+  max-width: 170px;
 }
 
-.product-img-icon {
-  background-color: $primary-color;
+.product-footer {
+  margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  color: $white-color;
+  gap: 76px;
+  align-self: flex-end;
+}
+
+.portions {
+  background-color: rgba(235, 25, 81, 0.50);
+  border-radius: 52px;
+  height: 18.3px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  p {
+    color: $text-secondary;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}
+
+.product-price {
+  font-weight: bold;
+  color: $text-secondary;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-size: cover;
+  background-position: center;
 }

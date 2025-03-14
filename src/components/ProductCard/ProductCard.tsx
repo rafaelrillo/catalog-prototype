@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import ProductModal from '../ProductModal/ProductModal';
-import ImageIcon from '../../../public/icons/image.svg';
+
+import PortionIcon from '../../../public/icons/portion-icon.svg'
 
 interface ProductCardProps {
   name: string;
@@ -10,32 +9,29 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
 
-    <div
+      <div
         className="product-card"
-        onClick={() => setIsModalOpen(true)} // Abrir el modal al hacer clic
       >
         <div className="product-details">
           <h3 className="product-name">{name}</h3>
           <p className="product-description">{description}</p>
-        </div>
-        <div className="product-info">
-          <p className="product-price">${price.toFixed(2)}</p>
-          <div className="product-img-icon">
-            <ImageIcon width={40} height={40} />
+          <div className='product-footer'>
+            <div className='portions'>
+              <PortionIcon width={10} height={10} />
+              <p>10</p>
+            </div>
+            <p className="product-price">${price}</p>
           </div>
         </div>
+        <div
+        className="product-img"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
       </div>
-
-      <ProductModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        product={{ name, description, image }}
-      />
     </>
   );
 };

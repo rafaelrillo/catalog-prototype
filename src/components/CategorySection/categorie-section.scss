@@ -27,17 +27,28 @@
   padding: 16px;
 }
 
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .category-title {
   color: $text-primary;
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
   text-align: start;
-  width: 100%;
+  text-transform: uppercase;
+}
+
+.header-info {
+  text-align: start;
+  font-size: 10px;
 }
 
 .product-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
 }

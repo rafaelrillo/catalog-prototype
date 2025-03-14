@@ -45,8 +45,12 @@ const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products })
       ref={sectionRef}
       className={`category-section section ${isVisible ? "visible" : "hidden"}`}
     >
-      <h2 className="category-title">{name}</h2>
       <div className="product-list">
+        <div className="category-header">
+          <h2 className="category-title">{name}</h2>
+          <p className="header-info">Consultar por opciones <br/>
+            de más porciones</p>
+        </div>
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
