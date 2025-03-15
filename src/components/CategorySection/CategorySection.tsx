@@ -13,10 +13,11 @@ interface CategorySectionProps {
   name: string;
   products: Product[];
   cardBgColor: string; // Color de fondo de las tarjetas
+  portionBgColor: string;
   index: number; // Índice de la sección para alternar dirección
 }
 
-const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index }) => {
+const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -54,7 +55,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, c
             de más porciones</p>
         </div>
         {products.map((product, index) => (
-          <ProductCard key={index} {...product} cardBgColor={cardBgColor} />  // Color de fondo dinámico
+          <ProductCard key={index} {...product} cardBgColor={cardBgColor} portionBgColor={portionBgColor} />  // Color de fondo dinámico
         ))}
       </div>
     </section>

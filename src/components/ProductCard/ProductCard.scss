@@ -52,7 +52,6 @@
 }
 
 .portions {
-  background-color: rgba(235, 25, 81, 0.50);
   border-radius: 52px;
   height: 18.3px;
   width: 40px;
@@ -60,6 +59,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+  opacity: 0.5;
   p {
     color: $text-secondary;
     font-size: 10px;

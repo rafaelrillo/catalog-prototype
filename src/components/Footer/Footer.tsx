@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <Image
-        src="/images/logo.png"
+        src="/images/logo2.png"
         alt="Logo de mi sitio"
-        width={100}
+        width={200}
         height={100}
       />
       <div className='location-container'>
@@ -19,9 +19,7 @@ const Footer: React.FC = () => {
           <GoogleMap />
         </div>
         <div className='info'>
-          <h2>Direccion:</h2>
-          <p>Gral. Lamadrid 1200</p>
-          <h2>Telefono:</h2>
+          <p>Gral. Lamadrid 1200 | YB</p>
           <p>381-999999</p>
         </div>
       </div>
@@ -50,7 +48,6 @@ const Footer: React.FC = () => {
         </a>
       </div>
       <div className='horarios'>
-        <h2>Horario de atencion</h2>
         <p>Lunes a Viernes</p>
         <p>10:30 - 21:00</p>
         <p>Sabados y Domingos</p>

@@ -7,9 +7,10 @@ interface ProductCardProps {
   price: number;
   image: string;
   cardBgColor: string; // Color de fondo dinámico
+  portionBgColor: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor, portionBgColor }) => {
 
   return (
     <>
@@ -22,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, ima
           <h3 className="product-name">{name}</h3>
           <p className="product-description">{description}</p>
           <div className='product-footer'>
-            <div className='portions'>
+            <div className='portions' style={{ backgroundColor: portionBgColor }}>
               <PortionIcon width={10} height={10} />
               <p>10</p>
             </div>

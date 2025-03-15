@@ -5,8 +5,8 @@
   justify-content: space-around;
   gap: 20px;
 
-  background-color: #7d8c83;
-  color: white;
+  background-color: #fbd8d8;
+  color: $text-primary;
   text-align: center;
   padding: 1rem;
   height: 100vh;
@@ -27,6 +27,7 @@
 
 .info {
   font-size: 1rem;
+  font-weight: 300;
   text-align: start;
   h2 {
     font-size: 16px;
@@ -44,7 +45,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: $primary-color; /* Azul para destacar */
+  background-color: #716D6D; /* Azul para destacar */
   color: $white-color;
   border: none;
   display: flex;
@@ -57,19 +58,16 @@
 }
 
 .horarios {
-  h2 {
-    font-size: 16px;
-  }
   p {
+    font-size: 1rem;
+    font-weight: 300;
     margin: 5px;
   }
 }
 
 .studio-link {
   text-decoration: none;
-  color:#7d8c83;
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: $text-primary;
+  font-size: 10px;
+  font-weight: 300;
 }
