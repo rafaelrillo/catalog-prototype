@@ -6,15 +6,17 @@ interface ProductCardProps {
   description: string;
   price: number;
   image: string;
+  cardBgColor: string; // Color de fondo dinámico
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor }) => {
 
   return (
     <>
 
       <div
         className="product-card"
+        style={{ backgroundColor: cardBgColor }}
       >
         <div className="product-details">
           <h3 className="product-name">{name}</h3>

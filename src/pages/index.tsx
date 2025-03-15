@@ -14,11 +14,11 @@ const Home: React.FC = () => {
   }, []); // Solo se ejecuta una vez, al montar el componente
 
   const categories = [
-    { name: 'Tortas', id: 'category-1' },
-    { name: 'Tartas', id: 'category-2' },
-    { name: 'Brownies', id: 'category-3' },
-    { name: 'Bocaditos', id: 'category-4' },
-    { name: 'Servicios', id: 'category-5' },
+    { name: 'Tortas', id: 'category-1', cardBgColor: '#E67792' },
+    { name: 'Tartas', id: 'category-2', cardBgColor: '#A6BFB1' },
+    { name: 'Brownies', id: 'category-3',cardBgColor: '#F8C8DC' },
+    { name: 'Bocaditos', id: 'category-4',cardBgColor: '#C3E6CB' },
+    { name: 'Servicios', id: 'category-5',cardBgColor: '#F8C8DC' },
   ];
 
   const sampleProducts = [
@@ -58,12 +58,14 @@ const Home: React.FC = () => {
   return (
     <div className="scroll-container">
       <MainMenu categories={categories} />
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <CategorySection
           key={category.id}
           id={category.id}
           name={category.name}
           products={sampleProducts}
+          cardBgColor={category.cardBgColor} // Pasamos el color de fondo
+        index={index} // Pasamos el índice para intercalar
         />
       ))}
       <ScrollToTopButton />

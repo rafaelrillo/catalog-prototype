@@ -5,8 +5,8 @@ $text-primary: #383838;
 $text-secondary: #FCF3F4;
 $white-color: #FFFFFF;
 $black-color: #000000;
-$background-primary: #F0F0F0;
-$background-secondary: #F9F9F9;
+$background-primary: #FCF3F4;
+$background-secondary: #FCF3F4;
 $text-dark: #3F3E3E;
 
 //typography
@@ -30,3 +30,60 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+
+
+
+/* 
+
+por el momento  propongo que hagamos 4 categorias: Torttas, Tartas, Antojitos (alfabrownies) y postres en bandeja.
+
+el color de fondo de toda la pagina es del codigo #FCF3F4
+
+
+EN GENERAL
+
+-Nombre de categorias
+Color: #383838
+Peso tipografico: Lexend SemiBold
+Tamaño: 32px
+
+-Descripcion categorias (texto al lado de la categoria)
+
+Color: #383838
+Peso tipografico: Lexend Regular
+Tamaño: 16px
+
+-Nombre de producto
+Tipografia: Lexend Medium
+Tamaño: 19px
+Color de texto: #FCF3F4
+
+-Descripcion de producto
+Tipografia: Lexend Light
+Tamaño: 12px
+Color de texto: #FCF3F4
+
+
+
+TORTAS
+BG color-primary: #E67792
+BG color de imagen: #FFFFFF
+BG color para icono de porciones: #EB1951 con transparencia al 50%
+
+
+TARTAS
+BG color-primary: #A6BFB1
+BG color de imagen: #FFFFFF
+BG color para icono de porciones: #5A9272 con transparencia al 50%
+
+ANTOJITOS
+BG color-primary: #F19C32
+BG color de imagen: #FFFFFF
+BG color para icono de porciones: #C57512 con transparencia al 50%
+
+POSTRES EN BANDEJA
+BG color-primary: #C680CC
+BG color de imagen: #FFFFFF
+BG color para icono de porciones: #AA17B6 con transparencia al 50%
+
+*/
