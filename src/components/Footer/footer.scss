@@ -1,6 +1,5 @@
 .footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   gap: 20px;
@@ -9,9 +8,10 @@
   color: $text-primary;
   text-align: center;
   padding: 1rem;
-  height: 100vh;
+  height: 117px;
   scroll-snap-align: start;
 }
+
 .location-container {
   width: 100%;
   display: flex;
@@ -20,18 +20,14 @@
 
 .map {
   background-color: white;
-  height: 250px;
-  width: 250px;
-  border-radius: 10px;
+  height: 70px;
+  width: 110px;
 }
 
 .info {
-  font-size: 1rem;
+  font-size: 8px;
   font-weight: 300;
-  text-align: start;
-  h2 {
-    font-size: 16px;
-  }
+  justify-content: flex-start;
 }
 
 .contact-container {
@@ -42,8 +38,8 @@
 
 .contact-btn {
 
-  width: 55px;
-  height: 55px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #716D6D; /* Azul para destacar */
   color: $white-color;
@@ -57,17 +53,32 @@
   transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
+.line-footer {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
 .horarios {
+  display: flex;
   p {
-    font-size: 1rem;
+    font-size: 8px;
     font-weight: 300;
     margin: 5px;
+    text-align: start;
   }
 }
 
 .studio-link {
+  position: relative;
+  margin-bottom: 0px;
+  margin-right: opx;
   text-decoration: none;
   color: $text-primary;
   font-size: 10px;
   font-weight: 300;
+
+  span {
+    font-weight: 500;
+  }
 }

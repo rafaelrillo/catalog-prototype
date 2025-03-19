@@ -8,53 +8,62 @@ import InstagramIcon from '../../../public/icons/instagram.svg';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <Image
-        src="/images/logo2.png"
-        alt="Logo de mi sitio"
-        width={200}
-        height={100}
-      />
-      <div className='location-container'>
-        <div className='map'>
-          <GoogleMap />
+      <div>
+        <Image
+          src="/images/logo2.png"
+          alt="Logo de mi sitio"
+          width={99}
+          height={41}
+        />
+        <div className='contact-container'>
+          <a
+            href="tel:+1234567890"
+            className="contact-btn"
+          >
+            <PhoneIcon width={12} height={12} />
+          </a>
+          <a
+            href="https://wa.me/1234567890?text=Hola,%20quiero%20saber%20más%20sobre%20sus%20productos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn"
+          >
+            <WhatsappIcon width={12} height={12} />
+          </a>
+          <a
+            href="https://www.instagram.com/popacakes/?hl=es"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn"
+          >
+            <InstagramIcon width={12} height={12} />
+          </a>
         </div>
-        <div className='info'>
-          <p>Gral. Lamadrid 1200 | YB</p>
-          <p>381-999999</p>
-        </div>
+
       </div>
-      <div className='contact-container'>
-        <a
-          href="tel:+1234567890"
-          className="contact-btn"
-        >
-        <PhoneIcon width={30} height={30}  />
-        </a>
-        <a
-          href="https://wa.me/1234567890?text=Hola,%20quiero%20saber%20más%20sobre%20sus%20productos"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-btn"
-        >
-          <WhatsappIcon width={30} height={30} />
-        </a>
-        <a
-          href="https://www.instagram.com/popacakes/?hl=es"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-btn"
-        >
-          <InstagramIcon width={30} height={30} />
-        </a>
-      </div>
-      <div className='horarios'>
-        <p>Lunes a Viernes</p>
-        <p>10:30 - 21:00</p>
-        <p>Sabados y Domingos</p>
-        <p>10:00 - 14:00</p>
+      <div className='map'>
+        <GoogleMap />
       </div>
       <div>
-        <Link href="https://google.com" className='studio-link'>made by Gloton Studio</Link>
+
+        <div className='info'>
+          <p>Gral. Lamadrid 1200 | YB</p>
+        </div>
+        <div className='line-footer'></div>
+
+        <div className='horarios'>
+          <div>
+            <p>Lunes a Viernes</p>
+            <p>Sabados y Domingos</p>
+          </div>
+          <div>
+            <p>10:30 - 21:00</p>
+            <p>10:00 - 14:00</p>
+          </div>
+        </div>
+        <div>
+        </div>
+        <Link href="https://google.com" className='studio-link'>made by <span>Gloton Studio</span></Link>
       </div>
     </footer>
   );

@@ -16,9 +16,9 @@ const Home: React.FC = () => {
   const categories = [
     { name: 'Tortas', id: 'category-1', cardBgColor: '#E67792', portionBgColor: '#EB1951' },
     { name: 'Tartas', id: 'category-2', cardBgColor: '#A6BFB1', portionBgColor: '#5A9272' },
-    { name: 'Brownies', id: 'category-3',cardBgColor: '#F19C32', portionBgColor: '#C57512' },
-    { name: 'Bocaditos', id: 'category-4',cardBgColor: '#C680CC', portionBgColor: '#AA17B6' },
-    { name: 'Servicios', id: 'category-5',cardBgColor: '#E67792', portionBgColor: '#EB1951' },
+    { name: 'Brownies', id: 'category-3', cardBgColor: '#F19C32', portionBgColor: '#C57512' },
+    { name: 'Bocaditos', id: 'category-4', cardBgColor: '#C680CC', portionBgColor: '#AA17B6' },
+    { name: 'Servicios', id: 'category-5', cardBgColor: '#E67792', portionBgColor: '#EB1951' },
   ];
 
   const sampleProducts = [
@@ -52,7 +52,25 @@ const Home: React.FC = () => {
       price: 9999,
       image: '/images/mouse-nutella.png',
     },
-    
+    {
+      name: 'Mousse Nutella',
+      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
+      price: 9999,
+      image: '/images/mouse-nutella.png',
+    },
+    {
+      name: 'Mousse Nutella',
+      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
+      price: 9999,
+      image: '/images/mouse-nutella.png',
+    },
+    {
+      name: 'Mousse Nutella',
+      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
+      price: 9999,
+      image: '/images/mouse-nutella.png',
+    },
+
   ];
 
   return (
@@ -64,9 +82,9 @@ const Home: React.FC = () => {
           id={category.id}
           name={category.name}
           products={sampleProducts}
-          cardBgColor={category.cardBgColor} // Pasamos el color de fondo
+          cardBgColor={category.cardBgColor}
           portionBgColor={category.portionBgColor}
-        index={index} // Pasamos el índice para intercalar
+          index={index}
         />
       ))}
       <ScrollToTopButton />
