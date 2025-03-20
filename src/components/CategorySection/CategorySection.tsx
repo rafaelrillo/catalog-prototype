@@ -17,7 +17,7 @@ interface CategorySectionProps {
   index: number; // Índice de la sección para alternar dirección
 }
 
-const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
+ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -61,5 +61,3 @@ const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, c
     </section>
   );
 };
-
-export default CategorySection;

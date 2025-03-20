@@ -10,7 +10,7 @@ interface ProductCardProps {
   portionBgColor: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor, portionBgColor }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor, portionBgColor }) => {
 
   return (
     <>
@@ -38,5 +38,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, ima
     </>
   );
 };
-
-export default ProductCard;

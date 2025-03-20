@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const Loader: React.FC = () => {
+export const Loader: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isFading, setIsFading] = useState(false);
 
@@ -28,5 +28,3 @@ const Loader: React.FC = () => {
     </div>
   );
 };
-
-export default Loader;

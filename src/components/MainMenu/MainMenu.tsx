@@ -9,7 +9,7 @@ interface MainMenuProps {
   }[];
 }
 
-const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
+export const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
   const [isVisible, setIsVisible] = useState(false);
   const menuRef = useRef<HTMLElement>(null);
 
@@ -68,5 +68,3 @@ const MainMenu: React.FC<MainMenuProps> = ({ categories }) => {
     </section>
   );
 };
-
-export default MainMenu;

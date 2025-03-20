@@ -1,8 +1,5 @@
 import { useEffect } from 'react';
-import MainMenu from '@/components/MainMenu/MainMenu';
-import CategorySection from '@/components/CategorySection/CategorySection';
-import Footer from '@/components/Footer/Footer';
-import ScrollToTopButton from '@/components/ScrollToTopButton/ScrollToTopButton';
+import { CategorySection, Footer, MainMenu, ScrollToTopButton } from '@/components';
 
 const Home: React.FC = () => {
 

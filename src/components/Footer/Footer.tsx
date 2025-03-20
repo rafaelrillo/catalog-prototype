@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import GoogleMap from '../GoogleMap/GoogleMap';
+import { GoogleMap } from '@/components';
 import PhoneIcon from '../../../public/icons/phone.svg';
 import WhatsappIcon from '../../../public/icons/whatsapp.svg';
 import InstagramIcon from '../../../public/icons/instagram.svg';
 
-const Footer: React.FC = () => {
+ export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div>
@@ -68,5 +68,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;

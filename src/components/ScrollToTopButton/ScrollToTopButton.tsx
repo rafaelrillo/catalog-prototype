@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import UpArrowIcon from '../../../public/icons/up-arrow.svg';
 
-const ScrollToTopButton: React.FC = () => {
+export const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,5 +36,3 @@ const ScrollToTopButton: React.FC = () => {
     </button>
   ) : null;
 };
-
-export default ScrollToTopButton;
