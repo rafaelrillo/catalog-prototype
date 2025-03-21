@@ -60,6 +60,7 @@
   justify-content: center;
   gap: 2px;
   opacity: 0.5;
+
   p {
     color: $text-secondary;
     font-size: 10px;
@@ -82,4 +83,14 @@
   border: 5px solid white;
   background-size: cover;
   background-position: center;
+}
+
+.portion-icon {
+  width: 14px;
+  height: 14px;
+  color: white;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

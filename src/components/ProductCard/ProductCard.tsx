@@ -1,6 +1,4 @@
-
-import PortionIcon from '../../../public/icons/portion-icon.svg'
-
+//import { Icon } from '@/components'
 interface ProductCardProps {
   name: string;
   description: string;
@@ -14,7 +12,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ name, description, pri
 
   return (
     <>
-
       <div
         className="product-card"
         style={{ backgroundColor: cardBgColor }}
@@ -24,16 +21,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ name, description, pri
           <p className="product-description">{description}</p>
           <div className='product-footer'>
             <div className='portions' style={{ backgroundColor: portionBgColor }}>
-              <PortionIcon width={10} height={10} />
+              <div className='portion-icon'>
+              {/*   <Icon name='portion' /> */}
+              </div>
               <p>10</p>
             </div>
             <p className="product-price">${price}</p>
           </div>
         </div>
         <div
-        className="product-img"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
+          className="product-img"
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
       </div>
     </>
   );

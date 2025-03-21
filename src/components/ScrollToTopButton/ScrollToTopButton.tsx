@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import UpArrowIcon from '../../../public/icons/up-arrow.svg';
+import { Icon } from '@/components';
 
 export const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ export const ScrollToTopButton: React.FC = () => {
       onClick={scrollToTop}
       aria-label="Volver al menú principal"
     >
-      <UpArrowIcon width={24} height={24} />
+      <Icon name='upArrow' />
     </button>
   ) : null;
 };

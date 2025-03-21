@@ -1,11 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { GoogleMap } from '@/components';
-import PhoneIcon from '../../../public/icons/phone.svg';
-import WhatsappIcon from '../../../public/icons/whatsapp.svg';
-import InstagramIcon from '../../../public/icons/instagram.svg';
+import { GoogleMap, Icon } from '@/components';
 
- export const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div>
@@ -20,7 +17,7 @@ import InstagramIcon from '../../../public/icons/instagram.svg';
             href="tel:+1234567890"
             className="contact-btn"
           >
-            <PhoneIcon width={12} height={12} />
+            <Icon name='phone' />
           </a>
           <a
             href="https://wa.me/1234567890?text=Hola,%20quiero%20saber%20más%20sobre%20sus%20productos"
@@ -28,15 +25,15 @@ import InstagramIcon from '../../../public/icons/instagram.svg';
             rel="noopener noreferrer"
             className="contact-btn"
           >
-            <WhatsappIcon width={12} height={12} />
+            <Icon name='whatsapp' />
           </a>
           <a
             href="https://www.instagram.com/popacakes/?hl=es"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-btn"
-          >
-            <InstagramIcon width={12} height={12} />
+          >            
+            <Icon name='instagram' />
           </a>
         </div>
 
