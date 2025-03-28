@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { CategorySection, Footer, MainMenu, ScrollToTopButton } from '@/components';
+import { CategorySection, Footer, ScrollToTopButton } from '@/components';
+import { MainMenu } from '@/components/MainMenu/components';
+import { ScrollIcon } from '@/components';
 
 const Home: React.FC = () => {
 
@@ -72,7 +74,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="scroll-container">
-      <MainMenu categories={categories} />
+      <MainMenu.Root>
+        <MainMenu.Logo />
+        <MainMenu.List categories={categories} />
+        <ScrollIcon />
+      </MainMenu.Root>
       {categories.map((category, index) => (
         <CategorySection
           key={category.id}

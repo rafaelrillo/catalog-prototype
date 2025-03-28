@@ -1,6 +1,6 @@
+'use client'
+
 import { useEffect, useState, useRef } from "react";
-/* import Image from "next/image";
-import { ScrollIcon } from "@/components"; */
 
 type MainMenuRootProps = {
   children: React.ReactNode;
