@@ -1,39 +1,67 @@
-//import { Icon } from '@/components'
-interface ProductCardProps {
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  cardBgColor: string; // Color de fondo dinámico
-  portionBgColor: string;
-}
+// ProductCard.tsx
+type ProductCardRootProps = {
+  children: React.ReactNode;
+  cardBgColor: string;
+};
 
-export const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, image, cardBgColor, portionBgColor }) => {
-
+const ProductCardRoot = ({ children, cardBgColor }: ProductCardRootProps) => {
   return (
-    <>
-      <div
-        className="product-card"
-        style={{ backgroundColor: cardBgColor }}
-      >
-        <div className="product-details">
-          <h3 className="product-name">{name}</h3>
-          <p className="product-description">{description}</p>
-          <div className='product-footer'>
-            <div className='portions' style={{ backgroundColor: portionBgColor }}>
-              <div className='portion-icon'>
-              {/*   <Icon name='portion' /> */}
-              </div>
-              <p>10</p>
-            </div>
-            <p className="product-price">${price}</p>
-          </div>
-        </div>
-        <div
-          className="product-img"
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-      </div>
-    </>
+    <div className="product-card" style={{ backgroundColor: cardBgColor }}>
+      {children}
+    </div>
   );
+};
+
+const ProductCardImage = ({ image }: { image: string }) => {
+  return (
+    <div
+      className="product-img"
+      style={{ backgroundImage: `url(${image})` }}
+    ></div>
+  );
+};
+
+const ProductCardDetails = ({ children }: { children: React.ReactNode }) => {
+  return <div className="product-details">{children}</div>;
+};
+
+const ProductCardName = ({ name }: { name: string }) => {
+  return <h3 className="product-name">{name}</h3>;
+};
+
+const ProductCardDescription = ({ description }: { description: string }) => {
+  return <p className="product-description">{description}</p>;
+};
+
+const ProductCardFooter = ({ children }: { children: React.ReactNode }) => {
+  return <div className="product-footer">{children}</div>;
+};
+
+const ProductCardPortion = ({
+  portionBgColor,
+  children,
+}: {
+  portionBgColor: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div className="portions" style={{ backgroundColor: portionBgColor }}>
+      {children}
+    </div>
+  );
+};
+
+const ProductCardPrice = ({ price }: { price: number }) => {
+  return <p className="product-price">${price}</p>;
+};
+
+export const ProductCard = {
+  Root: ProductCardRoot,
+  Image: ProductCardImage,
+  Details: ProductCardDetails,
+  Name: ProductCardName,
+  Description: ProductCardDescription,
+  Footer: ProductCardFooter,
+  Portion: ProductCardPortion,
+  Price: ProductCardPrice,
 };
