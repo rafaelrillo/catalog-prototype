@@ -7,3 +7,5 @@ export * from './ProductCard';
 export * from './ProductModal';
 export * from './ScrollIcon';
 export * from './ScrollToTopButton';
+export * from './Layout';
+export * from './Icons'

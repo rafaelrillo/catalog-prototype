@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { ProductCard } from "@/components";
+import { ProductCard } from '@/components';
 
 interface Product {
   name: string;
@@ -17,7 +17,7 @@ interface CategorySectionProps {
   index: number; // Índice de la sección para alternar dirección
 }
 
-const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
+export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, /* portionBgColor */ }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -51,15 +51,26 @@ const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, c
       <div className="product-list">
         <div className="category-header">
           <h2 className="category-title">{name}</h2>
-          <p className="header-info">Consultar por opciones <br />
-            de más porciones</p>
+          <p className="header-info">
+            Consultar por opciones <br />
+            de más porciones
+          </p>
         </div>
+
         {products.map((product, index) => (
-          <ProductCard key={index} {...product} cardBgColor={cardBgColor} portionBgColor={portionBgColor} />  // Color de fondo dinámico
+          <ProductCard.Root key={index} cardBgColor={cardBgColor}>
+            <ProductCard.Details>
+              <ProductCard.Name name={product.name} />
+              <ProductCard.Description description={product.description} />
+              <ProductCard.Footer>
+                {/* <ProductCard.Portion portionBgColor={portionBgColor} /> */}
+                <ProductCard.Price price={product.price} />
+              </ProductCard.Footer>
+            </ProductCard.Details>
+            <ProductCard.Image image={product.image} />
+          </ProductCard.Root>
         ))}
       </div>
     </section>
   );
 };
-
-export default CategorySection;

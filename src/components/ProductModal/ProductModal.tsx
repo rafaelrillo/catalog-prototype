@@ -11,7 +11,7 @@ interface ProductModalProps {
   } | null;
 }
 
-const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
+export const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -43,5 +43,3 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
     </dialog>
   );
 };
-
-export default ProductModal;
