@@ -1,90 +1,51 @@
 import { useEffect } from 'react';
+import { GetStaticProps } from 'next';
 import { CategorySection, Footer, ScrollToTopButton } from '@/components';
 import { MainMenu } from '@/components/MainMenu/components';
 import { ScrollIcon } from '@/components';
+import { getCategories, getProducts, Category, Product, urlFor } from '@/lib/sanity';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  categories: Category[];
+  products: Product[];
+}
+
+const Home: React.FC<HomeProps> = ({ categories, products }) => {
 
   useEffect(() => {
     const mainMenu = document.getElementById('main-menu');
     if (mainMenu) {
-      mainMenu.scrollIntoView({ behavior: 'auto' }); // Posiciona instantáneamente
+      mainMenu.scrollIntoView({ behavior: 'auto' });
     }
-  }, []); // Solo se ejecuta una vez, al montar el componente
+  }, []);
 
-  const categories = [
-    { name: 'Tortas', id: 'category-1', cardBgColor: '#E67792', portionBgColor: '#EB1951' },
-    { name: 'Tartas', id: 'category-2', cardBgColor: '#A6BFB1', portionBgColor: '#5A9272' },
-    { name: 'Brownies', id: 'category-3', cardBgColor: '#F19C32', portionBgColor: '#C57512' },
-    { name: 'Bocaditos', id: 'category-4', cardBgColor: '#C680CC', portionBgColor: '#AA17B6' },
-    { name: 'Servicios', id: 'category-5', cardBgColor: '#E67792', portionBgColor: '#EB1951' },
-  ];
+  // Transform products to include image URLs
+  const transformedProducts = products.map(product => ({
+    name: product.name,
+    description: product.description,
+    price: product.price,
+    image: product.image ? urlFor(product.image).url() : '/images/product.jpg'
+  }));
 
-  const sampleProducts = [
-    {
-      name: 'Matilda',
-      description: 'Bizcochuelo de chocolate con dulce de leche, relleno y cubierto con crema bariloche',
-      price: 9999,
-      image: '/images/matilda.png',
-    },
-    {
-      name: 'Oreo',
-      description: 'Base de galletas Oreo con dulce de leche y crema chantilli x2',
-      price: 9999,
-      image: '/images/oreo.png',
-    },
-    {
-      name: 'Capita',
-      description: 'Capas crocantes intercaladas con dulce de leche cubierto con merengue',
-      price: 9999,
-      image: '/images/capita.png',
-    },
-    {
-      name: 'Nuez sin harina',
-      description: 'Base húmeda de nuez sin harinas con dulce de leche, crema y frutos rojos.',
-      price: 9999,
-      image: '/images/nuez-sin-harina.png',
-    },
-    {
-      name: 'Mousse Nutella',
-      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
-      price: 9999,
-      image: '/images/mouse-nutella.png',
-    },
-    {
-      name: 'Mousse Nutella',
-      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
-      price: 9999,
-      image: '/images/mouse-nutella.png',
-    },
-    {
-      name: 'Mousse Nutella',
-      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
-      price: 9999,
-      image: '/images/mouse-nutella.png',
-    },
-    {
-      name: 'Mousse Nutella',
-      description: 'Masa sable de cacao rellena con dulce de leche y mousse de nutella.',
-      price: 9999,
-      image: '/images/mouse-nutella.png',
-    },
-
-  ];
+  // Transform categories to include the required id field
+  const transformedCategories = categories.map((category, index) => ({
+    ...category,
+    id: `category-${index + 1}` // Generate id based on index for consistency with existing CSS
+  }));
 
   return (
     <div className="scroll-container">
       <MainMenu.Root>
         <MainMenu.Logo />
-        <MainMenu.List categories={categories} />
+        <MainMenu.List categories={transformedCategories} />
         <ScrollIcon />
       </MainMenu.Root>
-      {categories.map((category, index) => (
+      {transformedCategories.map((category, index) => (
         <CategorySection
-          key={category.id}
+          key={category._id}
           id={category.id}
           name={category.name}
-          products={sampleProducts}
+          products={transformedProducts}
           cardBgColor={category.cardBgColor}
           portionBgColor={category.portionBgColor}
           index={index}
@@ -94,6 +55,34 @@ const Home: React.FC = () => {
       <Footer />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const [categories, products] = await Promise.all([
+      getCategories(),
+      getProducts()
+    ]);
+
+    return {
+      props: {
+        categories,
+        products,
+      },
+      revalidate: 60, // Revalidate every 60 seconds
+    };
+  } catch (error) {
+    console.error('Error fetching data from Sanity:', error);
+    
+    // Fallback to empty data if Sanity fails
+    return {
+      props: {
+        categories: [],
+        products: [],
+      },
+      revalidate: 60,
+    };
+  }
 };
 
 export default Home;
