@@ -62,6 +62,14 @@ export const product = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'portions',
+      title: 'Porciones',
+      type: 'number',
+      description: 'Número de porciones que rinde el producto',
+      validation: (Rule) => Rule.required().min(1).max(50),
+      initialValue: 8,
+    }),
+    defineField({
       name: 'order',
       title: 'Orden',
       type: 'number',

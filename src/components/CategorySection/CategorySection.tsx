@@ -5,6 +5,7 @@ interface Product {
   name: string;
   description: string;
   price: number;
+  portions: number;
   image: string;
 }
 
@@ -65,7 +66,7 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
               <ProductCard.Footer>
                 <ProductCard.Portion portionBgColor={portionBgColor}>
                   <Icon name="portion" className="portion-icon" />
-                  <Icon name="portion" className="portion-icon" />
+                  <span className="portion-number">{product.portions}</span>
                 </ProductCard.Portion>
                 <ProductCard.Price price={product.price} />
               </ProductCard.Footer>

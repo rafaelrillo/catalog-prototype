@@ -42,6 +42,7 @@ export const PRODUCTS_QUERY = `*[_type == "product" && available == true] | orde
   "slug": slug.current,
   description,
   price,
+  portions,
   image,
   "category": category->{
     _id,
@@ -59,6 +60,7 @@ export const PRODUCTS_BY_CATEGORY_QUERY = `*[_type == "product" && available == 
   "slug": slug.current,
   description,
   price,
+  portions,
   image,
   available,
   featured,
@@ -115,6 +117,7 @@ export interface Product {
   slug: string
   description: string
   price: number
+  portions: number
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: any
   category?: {
