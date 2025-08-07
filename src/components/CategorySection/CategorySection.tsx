@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { ProductCard } from '@/components';
+import { ProductCard, Icon } from '@/components';
 
 interface Product {
   name: string;
@@ -17,7 +17,7 @@ interface CategorySectionProps {
   index: number; // Índice de la sección para alternar dirección
 }
 
-export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, /* portionBgColor */ }) => {
+export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -63,7 +63,10 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
               <ProductCard.Name name={product.name} />
               <ProductCard.Description description={product.description} />
               <ProductCard.Footer>
-                {/* <ProductCard.Portion portionBgColor={portionBgColor} /> */}
+                <ProductCard.Portion portionBgColor={portionBgColor}>
+                  <Icon name="portion" className="portion-icon" />
+                  <Icon name="portion" className="portion-icon" />
+                </ProductCard.Portion>
                 <ProductCard.Price price={product.price} />
               </ProductCard.Footer>
             </ProductCard.Details>
