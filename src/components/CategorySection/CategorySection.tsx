@@ -19,7 +19,7 @@ interface CategorySectionProps {
 }
 
 export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start visible by default
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -42,6 +42,11 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
       }
     };
   }, []);
+
+  // Don't render section if no products
+  if (!products || products.length === 0) {
+    return null;
+  }
 
   return (
     <section

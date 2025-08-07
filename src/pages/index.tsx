@@ -21,11 +21,13 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
 
   // Transform products to include image URLs
   const transformedProducts = products.map(product => ({
+    _id: product._id,
     name: product.name,
     description: product.description,
     price: product.price,
     portions: product.portions || 8,
-    image: product.image ? urlFor(product.image).url() : '/images/product.jpg'
+    image: product.image ? urlFor(product.image).url() : '/images/product.jpg',
+    category: product.category
   }));
 
   // Transform categories to include the required id field
@@ -33,6 +35,13 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
     ...category,
     id: `category-${index + 1}` // Generate id based on index for consistency with existing CSS
   }));
+
+  // Function to get products for a specific category
+  const getProductsForCategory = (categoryId: string) => {
+    return transformedProducts.filter(product => 
+      product.category && product.category._id === categoryId
+    );
+  };
 
   return (
     <div className="scroll-container">
@@ -46,7 +55,7 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
           key={category._id}
           id={category.id}
           name={category.name}
-          products={transformedProducts}
+          products={getProductsForCategory(category._id)}
           cardBgColor={category.cardBgColor}
           portionBgColor={category.portionBgColor}
           index={index}
