@@ -2,10 +2,21 @@ import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
 const config = {
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION!,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ww97anmg',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-08-05',
   useCdn: true,
+}
+
+// Validar que las variables requeridas estén presentes
+if (!config.projectId) {
+  throw new Error('Missing NEXT_PUBLIC_SANITY_PROJECT_ID environment variable')
+}
+if (!config.dataset) {
+  throw new Error('Missing NEXT_PUBLIC_SANITY_DATASET environment variable')
+}
+if (!config.apiVersion) {
+  throw new Error('Missing NEXT_PUBLIC_SANITY_API_VERSION environment variable')
 }
 
 export const sanityClient = createClient(config)
