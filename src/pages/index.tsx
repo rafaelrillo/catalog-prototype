@@ -24,7 +24,7 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
     name: product.name,
     description: product.description,
     price: product.price,
-    portions: product.portions,
+    portions: product.portions || 8,
     image: product.image ? urlFor(product.image).url() : '/images/product.jpg'
   }));
 

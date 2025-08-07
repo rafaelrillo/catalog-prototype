@@ -18,8 +18,12 @@ const icons = {
       viewBox="0 0 24 24"
       fill="currentColor"
     >
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.12.23-2.19.64-3.17L12 12l7.36-3.17c.41.98.64 2.05.64 3.17 0 4.41-3.59 8-8 8z"/>
-      <path d="M12 2v10l-7.36 3.17C4.23 14.19 4 13.12 4 12c0-4.41 3.59-8 8-8z" fillOpacity="0.7"/>
+      <path d="M2 20c0 .5.4 1 1 1h18c.6 0 1-.4 1-1 0-.5-.4-1-1-1H3c-.6 0-1 .4-1 1z"/>
+      <path d="M3 17h18c.6 0 1-.4 1-1s-.4-1-1-1H3c-.6 0-1 .4-1 1s.4 1 1 1z"/>
+      <path d="M4 13h16c.6 0 1-.4 1-1s-.4-1-1-1H4c-.6 0-1 .4-1 1s.4 1 1 1z"/>
+      <path d="M5 9h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1z"/>
+      <path d="M2 20L12 2l10 18H2z" fillOpacity="0.1"/>
+      <path d="M2 20L12 2l10 18" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
     </svg>
   ),
   upArrow: (

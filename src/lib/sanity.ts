@@ -117,7 +117,7 @@ export interface Product {
   slug: string
   description: string
   price: number
-  portions: number
+  portions?: number
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: any
   category?: {
