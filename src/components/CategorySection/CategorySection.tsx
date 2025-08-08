@@ -63,8 +63,8 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
           </p>
         </div>
 
-        {products.map((product, index) => (
-          <ProductCard.Root key={index} cardBgColor={cardBgColor}>
+        {products.map((product, productIndex) => (
+          <ProductCard.Root key={productIndex} cardBgColor={cardBgColor}>
             <ProductCard.Details>
               <ProductCard.Name name={product.name} />
               <ProductCard.Description description={product.description} />
@@ -76,7 +76,12 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
                 <ProductCard.Price price={product.price} />
               </ProductCard.Footer>
             </ProductCard.Details>
-            <ProductCard.Image image={product.image} />
+            <ProductCard.Image 
+              image={product.image} 
+              productName={product.name}
+              index={productIndex}
+              categoryIndex={index}
+            />
           </ProductCard.Root>
         ))}
       </div>

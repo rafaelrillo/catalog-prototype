@@ -1,6 +1,7 @@
 export * from './CategorySection';
 export * from './Footer';
 export * from './GoogleMap';
+export * from './ImageLoader';
 export * from './Loader';
 export * from './MainMenu';
 export * from './ProductCard';

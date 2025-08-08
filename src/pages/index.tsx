@@ -4,6 +4,7 @@ import { CategorySection, Footer, ScrollToTopButton } from '@/components';
 import { MainMenu } from '@/components/MainMenu/components';
 import { ScrollIcon } from '@/components';
 import { getCategories, getProducts, Category, Product, urlFor } from '@/lib/sanity';
+import { preloadCriticalImages } from '@/utils/imageMapper';
 
 interface HomeProps {
   categories: Category[];
@@ -17,7 +18,13 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
     if (mainMenu) {
       mainMenu.scrollIntoView({ behavior: 'auto' });
     }
-  }, []);
+    
+    // Precargar imágenes críticas de los primeros productos
+    if (products.length > 0) {
+      const criticalProductNames = products.slice(0, 6).map(p => p.name);
+      preloadCriticalImages(criticalProductNames);
+    }
+  }, [products]);
 
   // Transform products to include image URLs
   const transformedProducts = products.map(product => ({

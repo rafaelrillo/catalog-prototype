@@ -115,9 +115,9 @@
   max-width: 125px; // Previene crecimiento
   border-radius: 50%;
   border: 5px solid white;
-  background-size: cover;
-  background-position: center;
   flex-shrink: 0; // Evita que se reduzca por falta de espacio
+  position: relative; // Requerido para Next.js Image con fill
+  overflow: hidden; // Asegura que la imagen respete border-radius
 }
 
 .portion-icon {

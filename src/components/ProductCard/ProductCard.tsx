@@ -12,12 +12,40 @@ const ProductCardRoot = ({ children, cardBgColor }: ProductCardRootProps) => {
   );
 };
 
-const ProductCardImage = ({ image }: { image: string }) => {
+import Image from 'next/image';
+import { generateBlurDataURL, getOptimizedImageUrl, shouldPrioritizeImage, getImageSizes } from '@/utils/imageOptimization';
+
+const ProductCardImage = ({ 
+  image, 
+  productName, 
+  index = 0, 
+  categoryIndex = 0 
+}: { 
+  image: string; 
+  productName: string;
+  index?: number;
+  categoryIndex?: number;
+}) => {
+  const optimizedUrl = getOptimizedImageUrl(image, productName);
+  const isPriority = shouldPrioritizeImage(index, categoryIndex);
+  
   return (
-    <div
-      className="product-img"
-      style={{ backgroundImage: `url(${image})` }}
-    ></div>
+    <div className="product-img">
+      <Image
+        src={optimizedUrl}
+        alt={`Imagen de ${productName}`}
+        fill
+        sizes={getImageSizes()}
+        priority={isPriority}
+        placeholder="blur"
+        blurDataURL={generateBlurDataURL()}
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center'
+        }}
+        loading={isPriority ? 'eager' : 'lazy'}
+      />
+    </div>
   );
 };
 

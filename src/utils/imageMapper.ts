@@ -46,7 +46,33 @@ export const productImageMapping: { [key: string]: string } = {
   'Trufas Chocolina': 'trufas-chocolina.png'
 }
 
+const imageCache = new Map<string, string>();
+
 export function getProductImage(productName: string): string {
-  const imageName = productImageMapping[productName]
-  return imageName ? `/images/${imageName}` : '/images/product.jpg'
+  // Usar cache para evitar búsquedas repetidas
+  if (imageCache.has(productName)) {
+    return imageCache.get(productName)!;
+  }
+  
+  const imageName = productImageMapping[productName];
+  const imagePath = imageName ? `/images/${imageName}` : '/images/product.jpg';
+  
+  // Almacenar en cache
+  imageCache.set(productName, imagePath);
+  
+  return imagePath;
+}
+
+export function preloadCriticalImages(productNames: string[]): void {
+  // Precargar las primeras 6 imágenes críticas
+  const criticalImages = productNames.slice(0, 6);
+  
+  criticalImages.forEach(productName => {
+    const imagePath = getProductImage(productName);
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imagePath;
+    document.head.appendChild(link);
+  });
 }
