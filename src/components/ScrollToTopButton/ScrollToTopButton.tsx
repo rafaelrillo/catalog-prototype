@@ -32,7 +32,7 @@ export const ScrollToTopButton: React.FC = () => {
       onClick={scrollToTop}
       aria-label="Volver al menú principal"
     >
-      <Icon name='upArrow' />
+      <Icon name='hamburger' />
     </button>
   ) : null;
 };
