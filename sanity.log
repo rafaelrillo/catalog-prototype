@@ -1,8 +1,0 @@
-
-> catalog-prototype@0.1.0 sanity
-> sanity dev
-
-✓ Checking configuration files...
-- Starting dev server
-✓ Starting dev server
-Sanity Studio using vite@6.3.5 ready in 178ms and running at http://localhost:3333/
