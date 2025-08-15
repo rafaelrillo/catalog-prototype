@@ -21,6 +21,23 @@ const IntroductionPage = () => (
         Bienvenido al **Design System** del catálogo de repostería. Este sistema proporciona 
         componentes reutilizables, design tokens y patrones de diseño consistentes.
       </p>
+      
+      <div style={{
+        background: '#d1fae5',
+        border: '1px solid #10b981',
+        borderRadius: '8px',
+        padding: '16px',
+        marginTop: '24px'
+      }}>
+        <p style={{ 
+          margin: '0', 
+          color: '#047857', 
+          fontWeight: '600',
+          fontSize: '1rem'
+        }}>
+          ✅ <strong>Auto-Deploy Configurado</strong>: Este Storybook se actualiza automáticamente con cada push a GitHub!
+        </p>
+      </div>
     </div>
 
     <section style={{ marginBottom: '40px' }}>
