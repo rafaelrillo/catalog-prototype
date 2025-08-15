@@ -1,0 +1,166 @@
+{
+  "figma_variables_template": {
+    "collection_name": "Catalog Prototype - Design Tokens",
+    "description": "Design system tokens for repostería catalog",
+    "variables": {
+      "colors": {
+        "product_categories": {
+          "tortas": {
+            "light": {
+              "value": "#E67792",
+              "description": "Tortas background color - light variant"
+            },
+            "main": {
+              "value": "#EB1951",
+              "description": "Tortas accent color - main variant"
+            }
+          },
+          "tartas": {
+            "light": {
+              "value": "#A6BFB1",
+              "description": "Tartas background color - light variant"
+            },
+            "main": {
+              "value": "#5A9272",
+              "description": "Tartas accent color - main variant"
+            }
+          },
+          "brownies": {
+            "light": {
+              "value": "#F19C32",
+              "description": "Brownies background color - light variant"
+            },
+            "main": {
+              "value": "#C57512",
+              "description": "Brownies accent color - main variant"
+            }
+          },
+          "cheesecakes": {
+            "light": {
+              "value": "#F8C8DC",
+              "description": "Cheesecakes background color - light variant"
+            },
+            "main": {
+              "value": "#E91E63",
+              "description": "Cheesecakes accent color - main variant"
+            }
+          },
+          "alfajores": {
+            "light": {
+              "value": "#C680CC",
+              "description": "Alfajores background color - light variant"
+            },
+            "main": {
+              "value": "#AA17B6",
+              "description": "Alfajores accent color - main variant"
+            }
+          },
+          "otros": {
+            "light": {
+              "value": "#FFEB3B",
+              "description": "Otros background color - light variant"
+            },
+            "main": {
+              "value": "#F57F17",
+              "description": "Otros accent color - main variant"
+            }
+          }
+        },
+        "neutrals": {
+          "white": "#FFFFFF",
+          "black": "#000000",
+          "gray_50": "#F9FAFB",
+          "gray_100": "#F3F4F6",
+          "gray_200": "#E5E7EB",
+          "gray_300": "#D1D5DB",
+          "gray_400": "#9CA3AF",
+          "gray_500": "#6B7280",
+          "gray_600": "#4B5563",
+          "gray_700": "#374151",
+          "gray_800": "#1F2937",
+          "gray_900": "#111827"
+        },
+        "semantic": {
+          "success": {
+            "light": "#D1FAE5",
+            "main": "#10B981",
+            "dark": "#047857"
+          },
+          "warning": {
+            "light": "#FEF3C7",
+            "main": "#F59E0B",
+            "dark": "#D97706"
+          },
+          "error": {
+            "light": "#FEE2E2",
+            "main": "#EF4444",
+            "dark": "#DC2626"
+          },
+          "info": {
+            "light": "#DBEAFE",
+            "main": "#3B82F6",
+            "dark": "#1D4ED8"
+          }
+        }
+      },
+      "spacing": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px",
+        "3xl": "64px"
+      },
+      "typography": {
+        "font_sizes": {
+          "xs": "12px",
+          "sm": "14px",
+          "base": "16px",
+          "lg": "18px",
+          "xl": "20px",
+          "2xl": "24px",
+          "3xl": "30px",
+          "4xl": "36px"
+        },
+        "font_weights": {
+          "light": 300,
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700,
+          "extrabold": 800
+        },
+        "line_heights": {
+          "tight": 1.25,
+          "normal": 1.5,
+          "relaxed": 1.75
+        }
+      },
+      "border_radius": {
+        "none": "0px",
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "2xl": "24px",
+        "full": "999px"
+      },
+      "shadows": {
+        "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+      }
+    }
+  },
+  "setup_instructions": {
+    "step_1": "Open Figma → Create new file → Go to Variables panel",
+    "step_2": "Click + Create variable collection",
+    "step_3": "Name: 'Catalog Prototype - Design Tokens'",
+    "step_4": "Create color variables for each product category",
+    "step_5": "Create number variables for spacing values",
+    "step_6": "Create string variables for typography and other tokens",
+    "step_7": "Publish as library for team access"
+  }
+}

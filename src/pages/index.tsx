@@ -5,6 +5,7 @@ import { MainMenu } from '@/components/MainMenu/components';
 import { ScrollIcon } from '@/components';
 import { getCategories, getProducts, Category, Product, urlFor } from '@/lib/sanity';
 import { preloadCriticalImages } from '@/utils/imageMapper';
+import { mapCategoryToDesignSystem } from '@/utils/categoryMapper';
 
 interface HomeProps {
   categories: Category[];
@@ -57,17 +58,19 @@ const Home: React.FC<HomeProps> = ({ categories, products }) => {
         <MainMenu.List categories={transformedCategories} />
         <ScrollIcon />
       </MainMenu.Root>
-      {transformedCategories.map((category, index) => (
-        <CategorySection
-          key={category._id}
-          id={category.id}
-          name={category.name}
-          products={getProductsForCategory(category._id)}
-          cardBgColor={category.cardBgColor}
-          portionBgColor={category.portionBgColor}
-          index={index}
-        />
-      ))}
+      {transformedCategories.map((category, index) => {
+        const designSystemCategory = mapCategoryToDesignSystem(category.name);
+        return (
+          <CategorySection
+            key={category._id}
+            id={category.id}
+            name={category.name}
+            products={getProductsForCategory(category._id)}
+            category={designSystemCategory}
+            index={index}
+          />
+        );
+      })}
       <ScrollToTopButton />
       <Footer />
     </div>

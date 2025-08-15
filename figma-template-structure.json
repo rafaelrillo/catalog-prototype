@@ -1,0 +1,405 @@
+{
+  "figmaTemplate": {
+    "name": "Design System - Catálogo de Repostería",
+    "description": "Template base con Variables y componentes para el design system de repostería",
+    "pages": [
+      {
+        "name": "🎨 Design Tokens",
+        "sections": [
+          {
+            "name": "Variables Setup",
+            "description": "Configurar estas Variables en Figma",
+            "variables": {
+              "colors": {
+                "categoryColors": {
+                  "tortas": {
+                    "light": "#E67792",
+                    "main": "#EB1951"
+                  },
+                  "tartas": {
+                    "light": "#A6BFB1", 
+                    "main": "#5A9272"
+                  },
+                  "brownies": {
+                    "light": "#F19C32",
+                    "main": "#C57512"
+                  },
+                  "cheesecakes": {
+                    "light": "#F8C8DC",
+                    "main": "#E91E63"
+                  },
+                  "alfajores": {
+                    "light": "#C680CC",
+                    "main": "#AA17B6"
+                  },
+                  "otros": {
+                    "light": "#FFEB3B",
+                    "main": "#F57F17"
+                  }
+                },
+                "neutralColors": {
+                  "white": "#FFFFFF",
+                  "gray-50": "#F9FAFB",
+                  "gray-100": "#F3F4F6",
+                  "gray-200": "#E5E7EB",
+                  "gray-300": "#D1D5DB",
+                  "gray-400": "#9CA3AF",
+                  "gray-500": "#6B7280",
+                  "gray-600": "#4B5563",
+                  "gray-700": "#374151",
+                  "gray-800": "#1F2937",
+                  "gray-900": "#111827",
+                  "black": "#000000"
+                },
+                "semanticColors": {
+                  "success": {
+                    "light": "#D1FAE5",
+                    "main": "#10B981",
+                    "dark": "#047857"
+                  },
+                  "warning": {
+                    "light": "#FEF3C7",
+                    "main": "#F59E0B", 
+                    "dark": "#D97706"
+                  },
+                  "error": {
+                    "light": "#FEE2E2",
+                    "main": "#EF4444",
+                    "dark": "#DC2626"
+                  },
+                  "info": {
+                    "light": "#DBEAFE",
+                    "main": "#3B82F6",
+                    "dark": "#1D4ED8"
+                  }
+                }
+              },
+              "spacing": {
+                "xs": 4,
+                "sm": 8,
+                "md": 16,
+                "lg": 24,
+                "xl": 32,
+                "2xl": 48,
+                "3xl": 64
+              },
+              "typography": {
+                "fontSize": {
+                  "xs": 12,
+                  "sm": 14,
+                  "base": 16,
+                  "lg": 18,
+                  "xl": 20,
+                  "2xl": 24,
+                  "3xl": 30,
+                  "4xl": 36
+                },
+                "fontWeight": {
+                  "light": 300,
+                  "normal": 400,
+                  "medium": 500,
+                  "semibold": 600,
+                  "bold": 700,
+                  "extrabold": 800
+                },
+                "lineHeight": {
+                  "tight": 1.25,
+                  "normal": 1.5,
+                  "relaxed": 1.75
+                }
+              },
+              "borderRadius": {
+                "none": 0,
+                "sm": 4,
+                "md": 8,
+                "lg": 12,
+                "xl": 16,
+                "2xl": 24,
+                "full": 999
+              },
+              "shadows": {
+                "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🧩 Components",
+        "sections": [
+          {
+            "name": "Button Component",
+            "description": "Componente Button con todas sus variantes",
+            "components": [
+              {
+                "name": "Button",
+                "variants": [
+                  {
+                    "name": "Primary/Small",
+                    "properties": {
+                      "variant": "primary",
+                      "size": "sm",
+                      "backgroundColor": "{gray-800}",
+                      "color": "{white}",
+                      "padding": "{xs} {md}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{sm}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "32px"
+                    }
+                  },
+                  {
+                    "name": "Primary/Medium",
+                    "properties": {
+                      "variant": "primary", 
+                      "size": "md",
+                      "backgroundColor": "{gray-800}",
+                      "color": "{white}",
+                      "padding": "{sm} {lg}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{base}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "40px"
+                    }
+                  },
+                  {
+                    "name": "Primary/Large",
+                    "properties": {
+                      "variant": "primary",
+                      "size": "lg", 
+                      "backgroundColor": "{gray-800}",
+                      "color": "{white}",
+                      "padding": "{md} {xl}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{lg}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "48px"
+                    }
+                  },
+                  {
+                    "name": "Secondary/Medium",
+                    "properties": {
+                      "variant": "secondary",
+                      "size": "md",
+                      "backgroundColor": "{white}",
+                      "color": "{gray-700}",
+                      "border": "1px solid {gray-300}",
+                      "padding": "{sm} {lg}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{base}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "40px"
+                    }
+                  },
+                  {
+                    "name": "Ghost/Medium",
+                    "properties": {
+                      "variant": "ghost",
+                      "size": "md",
+                      "backgroundColor": "transparent",
+                      "color": "{gray-600}",
+                      "border": "1px solid transparent",
+                      "padding": "{sm} {lg}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{base}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "40px"
+                    }
+                  },
+                  {
+                    "name": "Disabled",
+                    "properties": {
+                      "variant": "primary",
+                      "size": "md",
+                      "backgroundColor": "{gray-800}",
+                      "color": "{white}",
+                      "opacity": "0.6",
+                      "padding": "{sm} {lg}",
+                      "borderRadius": "{md}",
+                      "fontSize": "{base}",
+                      "fontWeight": "{medium}",
+                      "minHeight": "40px"
+                    }
+                  }
+                ],
+                "states": {
+                  "default": "base style",
+                  "hover": "transform: translateY(-1px), shadow: {md}",
+                  "active": "transform: translateY(0), shadow: {sm}",
+                  "focus": "outline: 2px solid {info-main}, outline-offset: 2px",
+                  "disabled": "opacity: 0.6, cursor: not-allowed"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ProductCard Component", 
+            "description": "Componente ProductCard con categorías",
+            "components": [
+              {
+                "name": "ProductCard",
+                "structure": {
+                  "root": {
+                    "width": "330px",
+                    "height": "117px",
+                    "borderRadius": "{full}",
+                    "padding": "0 0 0 {2xl}",
+                    "boxShadow": "{md}",
+                    "display": "flex",
+                    "alignItems": "center",
+                    "justifyContent": "space-between"
+                  },
+                  "details": {
+                    "maxWidth": "180px",
+                    "minWidth": "180px",
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "gap": "{xs}",
+                    "color": "{white}"
+                  },
+                  "productName": {
+                    "fontSize": "{lg}",
+                    "fontWeight": "{medium}",
+                    "lineHeight": "{tight}",
+                    "maxLines": 2
+                  },
+                  "productDescription": {
+                    "fontSize": "{xs}",
+                    "fontWeight": "{light}",
+                    "lineHeight": "{normal}",
+                    "maxLines": 2
+                  },
+                  "footer": {
+                    "display": "flex",
+                    "alignItems": "center",
+                    "gap": "{lg}",
+                    "justifyContent": "space-between",
+                    "width": "100%"
+                  },
+                  "portions": {
+                    "borderRadius": "{full}",
+                    "height": "18.3px",
+                    "width": "40px",
+                    "display": "flex",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "gap": "{xs}",
+                    "opacity": "0.5"
+                  },
+                  "price": {
+                    "fontSize": "{sm}",
+                    "fontWeight": "{medium}",
+                    "color": "{white}"
+                  },
+                  "image": {
+                    "width": "125px",
+                    "height": "125px",
+                    "borderRadius": "{full}",
+                    "border": "{xs} solid {white}",
+                    "position": "relative",
+                    "overflow": "hidden"
+                  }
+                },
+                "categoryVariants": [
+                  {
+                    "name": "Tortas",
+                    "backgroundColor": "{tortas-light}",
+                    "portionBg": "{tortas-main}"
+                  },
+                  {
+                    "name": "Tartas", 
+                    "backgroundColor": "{tartas-light}",
+                    "portionBg": "{tartas-main}"
+                  },
+                  {
+                    "name": "Brownies",
+                    "backgroundColor": "{brownies-light}",
+                    "portionBg": "{brownies-main}"
+                  },
+                  {
+                    "name": "Cheesecakes",
+                    "backgroundColor": "{cheesecakes-light}",
+                    "portionBg": "{cheesecakes-main}"
+                  },
+                  {
+                    "name": "Alfajores",
+                    "backgroundColor": "{alfajores-light}",
+                    "portionBg": "{alfajores-main}"
+                  },
+                  {
+                    "name": "Otros",
+                    "backgroundColor": "{otros-light}",
+                    "portionBg": "{otros-main}"
+                  }
+                ],
+                "states": {
+                  "default": "base style",
+                  "hover": "transform: translateY(-2px), shadow: {lg}"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "📱 Examples",
+        "sections": [
+          {
+            "name": "Sample Layouts",
+            "description": "Ejemplos de uso de los componentes",
+            "examples": [
+              {
+                "name": "Product Grid",
+                "description": "Grid de ProductCards con diferentes categorías",
+                "layout": "grid",
+                "components": [
+                  "ProductCard (Tortas)",
+                  "ProductCard (Tartas)",
+                  "ProductCard (Brownies)",
+                  "ProductCard (Cheesecakes)",
+                  "ProductCard (Alfajores)",
+                  "ProductCard (Otros)"
+                ]
+              },
+              {
+                "name": "Button Collection",
+                "description": "Colección de todos los tipos de botones",
+                "layout": "flex-column",
+                "components": [
+                  "Button (Primary/Small)",
+                  "Button (Primary/Medium)",
+                  "Button (Primary/Large)",
+                  "Button (Secondary/Medium)",
+                  "Button (Ghost/Medium)",
+                  "Button (Disabled)"
+                ]
+              },
+              {
+                "name": "Category Section",
+                "description": "Sección completa con título y productos",
+                "layout": "stack",
+                "components": [
+                  "Heading (Category Title)",
+                  "ProductCard (same category) x3",
+                  "Button (Ver más)"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "setupInstructions": {
+      "step1": "Crear nuevo archivo en Figma",
+      "step2": "Configurar Variables (Menu → Libraries → Variables)",
+      "step3": "Crear Collections para Colors, Spacing, Typography, etc.",
+      "step4": "Importar todos los valores desde este JSON",
+      "step5": "Crear Components usando las Variables",
+      "step6": "Crear variantes usando Properties",
+      "step7": "Documentar uso en Description de cada Component"
+    }
+  }
+}

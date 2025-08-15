@@ -1,0 +1,233 @@
+/* =================================================================== */
+/* DESIGN TOKENS MIXINS */
+/* =================================================================== */
+
+/* Category Color Mixins */
+@mixin category-color($category, $variant: 'main') {
+  @if $variant == 'light' {
+    @if $category == 'tortas' { color: var(--color-tortas-light); }
+    @else if $category == 'tartas' { color: var(--color-tartas-light); }
+    @else if $category == 'brownies' { color: var(--color-brownies-light); }
+    @else if $category == 'cheesecakes' { color: var(--color-cheesecakes-light); }
+    @else if $category == 'alfajores' { color: var(--color-alfajores-light); }
+    @else if $category == 'otros' { color: var(--color-otros-light); }
+  } @else {
+    @if $category == 'tortas' { color: var(--color-tortas-main); }
+    @else if $category == 'tartas' { color: var(--color-tartas-main); }
+    @else if $category == 'brownies' { color: var(--color-brownies-main); }
+    @else if $category == 'cheesecakes' { color: var(--color-cheesecakes-main); }
+    @else if $category == 'alfajores' { color: var(--color-alfajores-main); }
+    @else if $category == 'otros' { color: var(--color-otros-main); }
+  }
+}
+
+@mixin category-background($category, $variant: 'main') {
+  @if $variant == 'light' {
+    @if $category == 'tortas' { background-color: var(--color-tortas-light); }
+    @else if $category == 'tartas' { background-color: var(--color-tartas-light); }
+    @else if $category == 'brownies' { background-color: var(--color-brownies-light); }
+    @else if $category == 'cheesecakes' { background-color: var(--color-cheesecakes-light); }
+    @else if $category == 'alfajores' { background-color: var(--color-alfajores-light); }
+    @else if $category == 'otros' { background-color: var(--color-otros-light); }
+  } @else {
+    @if $category == 'tortas' { background-color: var(--color-tortas-main); }
+    @else if $category == 'tartas' { background-color: var(--color-tartas-main); }
+    @else if $category == 'brownies' { background-color: var(--color-brownies-main); }
+    @else if $category == 'cheesecakes' { background-color: var(--color-cheesecakes-main); }
+    @else if $category == 'alfajores' { background-color: var(--color-alfajores-main); }
+    @else if $category == 'otros' { background-color: var(--color-otros-main); }
+  }
+}
+
+@mixin category-border($category, $variant: 'main') {
+  @if $variant == 'light' {
+    @if $category == 'tortas' { border-color: var(--color-tortas-light); }
+    @else if $category == 'tartas' { border-color: var(--color-tartas-light); }
+    @else if $category == 'brownies' { border-color: var(--color-brownies-light); }
+    @else if $category == 'cheesecakes' { border-color: var(--color-cheesecakes-light); }
+    @else if $category == 'alfajores' { border-color: var(--color-alfajores-light); }
+    @else if $category == 'otros' { border-color: var(--color-otros-light); }
+  } @else {
+    @if $category == 'tortas' { border-color: var(--color-tortas-main); }
+    @else if $category == 'tartas' { border-color: var(--color-tartas-main); }
+    @else if $category == 'brownies' { border-color: var(--color-brownies-main); }
+    @else if $category == 'cheesecakes' { border-color: var(--color-cheesecakes-main); }
+    @else if $category == 'alfajores' { border-color: var(--color-alfajores-main); }
+    @else if $category == 'otros' { border-color: var(--color-otros-main); }
+  }
+}
+
+/* Semantic Color Mixins */
+@mixin semantic-color($type, $variant: 'main') {
+  @if $variant == 'light' {
+    @if $type == 'success' { color: var(--color-success-light); }
+    @else if $type == 'warning' { color: var(--color-warning-light); }
+    @else if $type == 'error' { color: var(--color-error-light); }
+    @else if $type == 'info' { color: var(--color-info-light); }
+  } @else if $variant == 'dark' {
+    @if $type == 'success' { color: var(--color-success-dark); }
+    @else if $type == 'warning' { color: var(--color-warning-dark); }
+    @else if $type == 'error' { color: var(--color-error-dark); }
+    @else if $type == 'info' { color: var(--color-info-dark); }
+  } @else {
+    @if $type == 'success' { color: var(--color-success-main); }
+    @else if $type == 'warning' { color: var(--color-warning-main); }
+    @else if $type == 'error' { color: var(--color-error-main); }
+    @else if $type == 'info' { color: var(--color-info-main); }
+  }
+}
+
+@mixin semantic-background($type, $variant: 'main') {
+  @if $variant == 'light' {
+    @if $type == 'success' { background-color: var(--color-success-light); }
+    @else if $type == 'warning' { background-color: var(--color-warning-light); }
+    @else if $type == 'error' { background-color: var(--color-error-light); }
+    @else if $type == 'info' { background-color: var(--color-info-light); }
+  } @else if $variant == 'dark' {
+    @if $type == 'success' { background-color: var(--color-success-dark); }
+    @else if $type == 'warning' { background-color: var(--color-warning-dark); }
+    @else if $type == 'error' { background-color: var(--color-error-dark); }
+    @else if $type == 'info' { background-color: var(--color-info-dark); }
+  } @else {
+    @if $type == 'success' { background-color: var(--color-success-main); }
+    @else if $type == 'warning' { background-color: var(--color-warning-main); }
+    @else if $type == 'error' { background-color: var(--color-error-main); }
+    @else if $type == 'info' { background-color: var(--color-info-main); }
+  }
+}
+
+/* Typography Mixins */
+@mixin font-size($size) {
+  @if $size == 'xs' { font-size: var(--font-size-xs); }
+  @else if $size == 'sm' { font-size: var(--font-size-sm); }
+  @else if $size == 'base' { font-size: var(--font-size-base); }
+  @else if $size == 'lg' { font-size: var(--font-size-lg); }
+  @else if $size == 'xl' { font-size: var(--font-size-xl); }
+  @else if $size == '2xl' { font-size: var(--font-size-2xl); }
+  @else if $size == '3xl' { font-size: var(--font-size-3xl); }
+  @else if $size == '4xl' { font-size: var(--font-size-4xl); }
+}
+
+@mixin text-style($size, $weight: 'normal', $line-height: 'normal') {
+  @include font-size($size);
+  
+  @if $weight == 'light' { font-weight: var(--font-weight-light); }
+  @else if $weight == 'normal' { font-weight: var(--font-weight-normal); }
+  @else if $weight == 'medium' { font-weight: var(--font-weight-medium); }
+  @else if $weight == 'semibold' { font-weight: var(--font-weight-semibold); }
+  @else if $weight == 'bold' { font-weight: var(--font-weight-bold); }
+  @else if $weight == 'extrabold' { font-weight: var(--font-weight-extrabold); }
+  
+  @if $line-height == 'tight' { line-height: var(--line-height-tight); }
+  @else if $line-height == 'normal' { line-height: var(--line-height-normal); }
+  @else if $line-height == 'relaxed' { line-height: var(--line-height-relaxed); }
+}
+
+/* Spacing Mixins */
+@mixin padding($size) {
+  @if $size == 'xs' { padding: var(--spacing-xs); }
+  @else if $size == 'sm' { padding: var(--spacing-sm); }
+  @else if $size == 'md' { padding: var(--spacing-md); }
+  @else if $size == 'lg' { padding: var(--spacing-lg); }
+  @else if $size == 'xl' { padding: var(--spacing-xl); }
+  @else if $size == '2xl' { padding: var(--spacing-2xl); }
+  @else if $size == '3xl' { padding: var(--spacing-3xl); }
+}
+
+@mixin margin($size) {
+  @if $size == 'xs' { margin: var(--spacing-xs); }
+  @else if $size == 'sm' { margin: var(--spacing-sm); }
+  @else if $size == 'md' { margin: var(--spacing-md); }
+  @else if $size == 'lg' { margin: var(--spacing-lg); }
+  @else if $size == 'xl' { margin: var(--spacing-xl); }
+  @else if $size == '2xl' { margin: var(--spacing-2xl); }
+  @else if $size == '3xl' { margin: var(--spacing-3xl); }
+}
+
+@mixin gap($size) {
+  @if $size == 'xs' { gap: var(--spacing-xs); }
+  @else if $size == 'sm' { gap: var(--spacing-sm); }
+  @else if $size == 'md' { gap: var(--spacing-md); }
+  @else if $size == 'lg' { gap: var(--spacing-lg); }
+  @else if $size == 'xl' { gap: var(--spacing-xl); }
+  @else if $size == '2xl' { gap: var(--spacing-2xl); }
+  @else if $size == '3xl' { gap: var(--spacing-3xl); }
+}
+
+/* Border Radius Mixins */
+@mixin border-radius($size) {
+  @if $size == 'none' { border-radius: var(--border-radius-none); }
+  @else if $size == 'sm' { border-radius: var(--border-radius-sm); }
+  @else if $size == 'md' { border-radius: var(--border-radius-md); }
+  @else if $size == 'lg' { border-radius: var(--border-radius-lg); }
+  @else if $size == 'xl' { border-radius: var(--border-radius-xl); }
+  @else if $size == '2xl' { border-radius: var(--border-radius-2xl); }
+  @else if $size == 'full' { border-radius: var(--border-radius-full); }
+}
+
+/* Shadow Mixins */
+@mixin shadow($size) {
+  @if $size == 'none' { box-shadow: var(--shadow-none); }
+  @else if $size == 'sm' { box-shadow: var(--shadow-sm); }
+  @else if $size == 'md' { box-shadow: var(--shadow-md); }
+  @else if $size == 'lg' { box-shadow: var(--shadow-lg); }
+  @else if $size == 'xl' { box-shadow: var(--shadow-xl); }
+  @else if $size == '2xl' { box-shadow: var(--shadow-2xl); }
+  @else if $size == 'inner' { box-shadow: var(--shadow-inner); }
+}
+
+/* Transition Mixins */
+@mixin transition($speed: 'normal') {
+  @if $speed == 'fast' { transition: var(--transition-fast); }
+  @else if $speed == 'normal' { transition: var(--transition-normal); }
+  @else if $speed == 'slow' { transition: var(--transition-slow); }
+}
+
+@mixin transition-property($property, $speed: 'normal') {
+  @if $speed == 'fast' { transition: #{$property} var(--transition-fast); }
+  @else if $speed == 'normal' { transition: #{$property} var(--transition-normal); }
+  @else if $speed == 'slow' { transition: #{$property} var(--transition-slow); }
+}
+
+/* Utility Mixins */
+@mixin card-style($shadow: 'md', $radius: 'lg', $padding: 'lg') {
+  @include shadow($shadow);
+  @include border-radius($radius);
+  @include padding($padding);
+  background-color: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-gray-200);
+}
+
+@mixin button-style($category: null, $variant: 'main', $size: 'md') {
+  @include border-radius('md');
+  @include transition-property(all);
+  border: none;
+  cursor: pointer;
+  
+  @if $size == 'sm' {
+    @include padding('sm');
+    @include text-style('sm', 'medium');
+  } @else if $size == 'lg' {
+    @include padding('lg');
+    @include text-style('lg', 'medium');
+  } @else {
+    @include padding('md');
+    @include text-style('base', 'medium');
+  }
+  
+  @if $category {
+    @include category-background($category, $variant);
+    color: var(--color-neutral-white);
+    
+    &:hover {
+      @include category-background($category, if($variant == 'light', 'main', 'light'));
+    }
+  } @else {
+    background-color: var(--color-neutral-gray-600);
+    color: var(--color-neutral-white);
+    
+    &:hover {
+      background-color: var(--color-neutral-gray-700);
+    }
+  }
+}

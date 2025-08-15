@@ -1,0 +1,163 @@
+:root {
+  /* =================================================================== */
+  /* COLORS - PRODUCT CATEGORIES */
+  /* =================================================================== */
+  
+  /* Tortas */
+  --color-tortas-light: #E67792;
+  --color-tortas-main: #EB1951;
+  
+  /* Tartas */
+  --color-tartas-light: #A6BFB1;
+  --color-tartas-main: #5A9272;
+  
+  /* Brownies */
+  --color-brownies-light: #F19C32;
+  --color-brownies-main: #C57512;
+  
+  /* Cheesecakes */
+  --color-cheesecakes-light: #F8C8DC;
+  --color-cheesecakes-main: #E91E63;
+  
+  /* Alfajores */
+  --color-alfajores-light: #C680CC;
+  --color-alfajores-main: #AA17B6;
+  
+  /* Otros */
+  --color-otros-light: #FFEB3B;
+  --color-otros-main: #F57F17;
+  
+  /* =================================================================== */
+  /* COLORS - NEUTRALS */
+  /* =================================================================== */
+  
+  --color-neutral-white: #FFFFFF;
+  --color-neutral-black: #000000;
+  --color-neutral-gray-50: #F9FAFB;
+  --color-neutral-gray-100: #F3F4F6;
+  --color-neutral-gray-200: #E5E7EB;
+  --color-neutral-gray-300: #D1D5DB;
+  --color-neutral-gray-400: #9CA3AF;
+  --color-neutral-gray-500: #6B7280;
+  --color-neutral-gray-600: #4B5563;
+  --color-neutral-gray-700: #374151;
+  --color-neutral-gray-800: #1F2937;
+  --color-neutral-gray-900: #111827;
+  
+  /* =================================================================== */
+  /* COLORS - SEMANTIC */
+  /* =================================================================== */
+  
+  /* Success */
+  --color-success-light: #D1FAE5;
+  --color-success-main: #10B981;
+  --color-success-dark: #047857;
+  
+  /* Warning */
+  --color-warning-light: #FEF3C7;
+  --color-warning-main: #F59E0B;
+  --color-warning-dark: #D97706;
+  
+  /* Error */
+  --color-error-light: #FEE2E2;
+  --color-error-main: #EF4444;
+  --color-error-dark: #DC2626;
+  
+  /* Info */
+  --color-info-light: #DBEAFE;
+  --color-info-main: #3B82F6;
+  --color-info-dark: #1D4ED8;
+  
+  /* =================================================================== */
+  /* SPACING */
+  /* =================================================================== */
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* =================================================================== */
+  /* TYPOGRAPHY */
+  /* =================================================================== */
+  
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* =================================================================== */
+  /* BORDER RADIUS */
+  /* =================================================================== */
+  
+  --border-radius-none: 0px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+  --border-radius-full: 999px;
+  
+  /* =================================================================== */
+  /* SHADOWS */
+  /* =================================================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: 0 0 #0000;
+  
+  /* =================================================================== */
+  /* Z-INDEX */
+  /* =================================================================== */
+  
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  
+  /* =================================================================== */
+  /* TRANSITIONS */
+  /* =================================================================== */
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  /* =================================================================== */
+  /* BREAKPOINTS */
+  /* =================================================================== */
+  
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}

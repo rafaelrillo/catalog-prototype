@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { ProductCard, Icon } from '@/components';
+import type { ProductCategory } from '@/components/ProductCard/ProductCard';
 
 interface Product {
   name: string;
@@ -13,12 +14,11 @@ interface CategorySectionProps {
   id: string;
   name: string;
   products: Product[];
-  cardBgColor: string; // Color de fondo de las tarjetas
-  portionBgColor: string;
+  category: ProductCategory; // Use design system category
   index: number; // Índice de la sección para alternar dirección
 }
 
-export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, cardBgColor, index, portionBgColor }) => {
+export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, products, category, index }) => {
   const [isVisible, setIsVisible] = useState(true); // Start visible by default
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -64,12 +64,12 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ id, name, prod
         </div>
 
         {products.map((product, productIndex) => (
-          <ProductCard.Root key={productIndex} cardBgColor={cardBgColor}>
+          <ProductCard.Root key={productIndex} category={category}>
             <ProductCard.Details>
               <ProductCard.Name name={product.name} />
               <ProductCard.Description description={product.description} />
               <ProductCard.Footer>
-                <ProductCard.Portion portionBgColor={portionBgColor}>
+                <ProductCard.Portion category={category}>
                   <Icon name="portion" className="portion-icon" />
                   <span className="portion-number">{product.portions || 8}</span>
                 </ProductCard.Portion>

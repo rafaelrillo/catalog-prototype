@@ -1,28 +1,36 @@
+@import '../../styles/design-tokens';
+
 .product-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 330px;
   height: 117px;
-  background-color: $primary-color;
+  // Background color will be set via inline style for category colors
 
-  padding-left: 33px;
+  padding-left: var(--spacing-2xl);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
 
-  border-radius: 62px;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 
 .product-details {
   text-align: start;
-  color: $text-secondary;
-  max-width: 180px; // Ajustado para que quepa en la card
-  min-width: 180px; // Ancho fijo para consistencia
+  color: var(--color-neutral-white);
+  max-width: 180px;
+  min-width: 180px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-  gap: 5px;
-  overflow: hidden; // Evita desbordamiento
+  gap: var(--spacing-xs);
+  overflow: hidden;
 }
 
 .product-info {
@@ -33,98 +41,103 @@
 }
 
 .product-name {
-  font-size: 19px;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   margin: 0;
   width: 100%;
   
   // Truncamiento inteligente para títulos largos
   display: -webkit-box;
-  -webkit-line-clamp: 2; // Máximo 2 líneas
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.2;
-  max-height: 2.4em; // 2 líneas * line-height
+  line-height: var(--line-height-tight);
+  max-height: 2.4em;
 }
 
 .product-description {
-  font-size: 12.322px;
+  font-size: var(--font-size-xs);
   margin: 0;
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   width: 100%;
   
   // Truncamiento inteligente para descripciones largas
   display: -webkit-box;
-  -webkit-line-clamp: 2; // Máximo 2 líneas
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.3;
-  max-height: 2.6em; // 2 líneas * line-height
+  line-height: var(--line-height-normal);
+  max-height: 2.6em;
 }
 
 .product-footer {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 20px; // Reducido para mejor fit
+  gap: var(--spacing-lg);
   align-self: flex-end;
   width: 100%;
-  justify-content: space-between; // Distribuye espacio mejor
+  justify-content: space-between;
 }
 
 .portions {
-  border-radius: 52px;
+  border-radius: var(--border-radius-full);
   height: 18.3px;
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: var(--spacing-xs);
   opacity: 0.5;
+  // Background color will be set via inline style for category colors
 
   p {
-    color: $text-secondary;
+    color: var(--color-neutral-white);
     font-size: 10px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
   }
 
   .portion-number {
-    color: white;
+    color: var(--color-neutral-white);
     font-size: 10px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     margin: 0;
   }
 }
 
 .product-price {
-  font-weight: bold;
-  color: $text-secondary;
+  color: var(--color-neutral-white);
   margin: 0;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
 }
 
 .product-img {
   height: 125px;
   width: 125px;
-  min-height: 125px; // Fuerza tamaño fijo
-  min-width: 125px; // Fuerza tamaño fijo
-  max-height: 125px; // Previene crecimiento
-  max-width: 125px; // Previene crecimiento
-  border-radius: 50%;
-  border: 5px solid white;
-  flex-shrink: 0; // Evita que se reduzca por falta de espacio
-  position: relative; // Requerido para Next.js Image con fill
-  overflow: hidden; // Asegura que la imagen respete border-radius
+  min-height: 125px;
+  min-width: 125px;
+  max-height: 125px;
+  max-width: 125px;
+  border-radius: var(--border-radius-full);
+  border: var(--spacing-xs) solid var(--color-neutral-white);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .portion-icon {
   width: 14px;
   height: 14px;
-  color: white;
-  background-color: none;
+  color: var(--color-neutral-white);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
